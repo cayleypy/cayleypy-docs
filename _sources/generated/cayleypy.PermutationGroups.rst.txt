@@ -22,6 +22,7 @@
       ~PermutationGroups.derangements
       ~PermutationGroups.full_reversals
       ~PermutationGroups.lrx
+      ~PermutationGroups.lx
       ~PermutationGroups.pancake
       ~PermutationGroups.three_cycles
       ~PermutationGroups.three_cycles_0ij
