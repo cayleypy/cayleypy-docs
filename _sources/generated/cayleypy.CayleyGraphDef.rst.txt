@@ -1,0 +1,42 @@
+﻿cayleypy.CayleyGraphDef
+=======================
+
+.. currentmodule:: cayleypy
+
+.. autoclass:: CayleyGraphDef
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CayleyGraphDef.__init__
+      ~CayleyGraphDef.create
+      ~CayleyGraphDef.for_matrix_group
+      ~CayleyGraphDef.is_permutation_group
+      ~CayleyGraphDef.normalize_central_state
+      ~CayleyGraphDef.with_central_state
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CayleyGraphDef.decoded_state_shape
+      ~CayleyGraphDef.generators
+      ~CayleyGraphDef.generators_inverse_closed
+      ~CayleyGraphDef.n_generators
+      ~CayleyGraphDef.state_size
+      ~CayleyGraphDef.generators_type
+      ~CayleyGraphDef.generators_permutations
+      ~CayleyGraphDef.generators_matrices
+      ~CayleyGraphDef.generator_names
+      ~CayleyGraphDef.central_state
+   
+   

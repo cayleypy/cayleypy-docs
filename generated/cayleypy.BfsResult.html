@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cayleypy.BfsResult &mdash; CayleyPy  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cayleypy.PermutationGroups" href="cayleypy.PermutationGroups.html" />
+    <link rel="prev" title="cayleypy.CayleyGraph" href="cayleypy.CayleyGraph.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CayleyPy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">CayleyPy API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#core-classes">Core classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.CayleyGraphDef.html">cayleypy.CayleyGraphDef</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.CayleyGraph.html">cayleypy.CayleyGraph</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">cayleypy.BfsResult</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cayleypy.BfsResult"><code class="docutils literal notranslate"><span class="pre">BfsResult</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#graph-library">Graph library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#algorithms">Algorithms</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CayleyPy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">CayleyPy API Reference</a></li>
+      <li class="breadcrumb-item active">cayleypy.BfsResult</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/cayleypy.BfsResult.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cayleypy-bfsresult">
+<h1>cayleypy.BfsResult<a class="headerlink" href="#cayleypy-bfsresult" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="cayleypy.BfsResult">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">BfsResult</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L12-L260"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult" title="Link to this definition"></a></dt>
+<dd><p>Result of running breadth-first search on a Schreier coset graph.</p>
+<p>Can be used to obtain the graph explicitly. In this case, vertices are numbered sequentially in the order in which
+they are visited by BFS.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bfs_completed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_sizes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertices_hashes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges_list_hashes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.CayleyGraphDef.html#cayleypy.CayleyGraphDef" title="cayleypy.cayley_graph_def.CayleyGraphDef"><span class="pre">CayleyGraphDef</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cayleypy.BfsResult.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.__init__" title="cayleypy.BfsResult.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(bfs_completed, layer_sizes, layers, ...)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.adjacency_matrix" title="cayleypy.BfsResult.adjacency_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjacency_matrix</span></code></a>()</p></td>
+<td><p>Returns adjacency matrix as a dense NumPy array.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.adjacency_matrix_sparse" title="cayleypy.BfsResult.adjacency_matrix_sparse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjacency_matrix_sparse</span></code></a>()</p></td>
+<td><p>Returns adjacency matrix as a sparse SciPy array.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.diameter" title="cayleypy.BfsResult.diameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diameter</span></code></a>()</p></td>
+<td><p>Maximal distance from any start vertex to any other vertex.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.get_edge_name" title="cayleypy.BfsResult.get_edge_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_edge_name</span></code></a>(i1, i2)</p></td>
+<td><p>Returns name for generator used to go from vertex i1 to vertex i2.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.get_layer" title="cayleypy.BfsResult.get_layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_layer</span></code></a>(layer_id)</p></td>
+<td><p>Returns all states in the layer with given index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_edges_list_hashes</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_vertices_hashes</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.last_layer" title="cayleypy.BfsResult.last_layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">last_layer</span></code></a>()</p></td>
+<td><p>Returns last layer, formatted as set of strings.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code>(path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.named_undirected_edges" title="cayleypy.BfsResult.named_undirected_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">named_undirected_edges</span></code></a>()</p></td>
+<td><p>Names for vertices (representing coset elements in readable format).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code>(path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_device</span></code>(device)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.to_networkx_graph" title="cayleypy.BfsResult.to_networkx_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_networkx_graph</span></code></a>([directed, with_labels])</p></td>
+<td><p>Returns explicit graph as networkx.Graph or networkx.DiGraph.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex_name</span></code>(state)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.all_states" title="cayleypy.BfsResult.all_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_states</span></code></a></p></td>
+<td><p>Explicit states, ordered by index.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.edges_list" title="cayleypy.BfsResult.edges_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_list</span></code></a></p></td>
+<td><p>Returns list of edges, with vertices renumbered.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.hashes_to_indices_dict" title="cayleypy.BfsResult.hashes_to_indices_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hashes_to_indices_dict</span></code></a></p></td>
+<td><p>Dictionary used to remap vertex hashes to indexes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.num_vertices" title="cayleypy.BfsResult.num_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_vertices</span></code></a></p></td>
+<td><p>Number of vertices in the graph.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.vertex_names" title="cayleypy.BfsResult.vertex_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex_names</span></code></a></p></td>
+<td><p>Returns names for vertices in the graph.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfs_completed</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">layer_sizes</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">layers</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertices_hashes</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_list_hashes</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">graph</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.adjacency_matrix">
+<span class="sig-name descname"><span class="pre">adjacency_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L193-L198"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.adjacency_matrix" title="Link to this definition"></a></dt>
+<dd><p>Returns adjacency matrix as a dense NumPy array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.adjacency_matrix_sparse">
+<span class="sig-name descname"><span class="pre">adjacency_matrix_sparse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">coo_array</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L200-L206"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.adjacency_matrix_sparse" title="Link to this definition"></a></dt>
+<dd><p>Returns adjacency matrix as a sparse SciPy array.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.all_states">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_states</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Tensor</span></em><a class="headerlink" href="#cayleypy.BfsResult.all_states" title="Link to this definition"></a></dt>
+<dd><p>Explicit states, ordered by index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.diameter">
+<span class="sig-name descname"><span class="pre">diameter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L129-L131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.diameter" title="Link to this definition"></a></dt>
+<dd><p>Maximal distance from any start vertex to any other vertex.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.edges_list">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">edges_list</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#cayleypy.BfsResult.edges_list" title="Link to this definition"></a></dt>
+<dd><p>Returns list of edges, with vertices renumbered.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.get_edge_name">
+<span class="sig-name descname"><span class="pre">get_edge_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L232-L246"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.get_edge_name" title="Link to this definition"></a></dt>
+<dd><p>Returns name for generator used to go from vertex i1 to vertex i2.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.get_layer">
+<span class="sig-name descname"><span class="pre">get_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L133-L139"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.get_layer" title="Link to this definition"></a></dt>
+<dd><p>Returns all states in the layer with given index.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.hashes_to_indices_dict">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hashes_to_indices_dict</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cayleypy.BfsResult.hashes_to_indices_dict" title="Link to this definition"></a></dt>
+<dd><p>Dictionary used to remap vertex hashes to indexes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.last_layer">
+<span class="sig-name descname"><span class="pre">last_layer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L141-L143"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.last_layer" title="Link to this definition"></a></dt>
+<dd><p>Returns last layer, formatted as set of strings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.named_undirected_edges">
+<span class="sig-name descname"><span class="pre">named_undirected_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L188-L191"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.named_undirected_edges" title="Link to this definition"></a></dt>
+<dd><p>Names for vertices (representing coset elements in readable format).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.num_vertices">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_vertices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#cayleypy.BfsResult.num_vertices" title="Link to this definition"></a></dt>
+<dd><p>Number of vertices in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.to_networkx_graph">
+<span class="sig-name descname"><span class="pre">to_networkx_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L248-L260"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.to_networkx_graph" title="Link to this definition"></a></dt>
+<dd><p>Returns explicit graph as networkx.Graph or networkx.DiGraph.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.vertex_names">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vertex_names</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cayleypy.BfsResult.vertex_names" title="Link to this definition"></a></dt>
+<dd><p>Returns names for vertices in the graph.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cayleypy.CayleyGraph.html" class="btn btn-neutral float-left" title="cayleypy.CayleyGraph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cayleypy.PermutationGroups.html" class="btn btn-neutral float-right" title="cayleypy.PermutationGroups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

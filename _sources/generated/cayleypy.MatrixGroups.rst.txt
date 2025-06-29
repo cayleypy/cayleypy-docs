@@ -1,0 +1,23 @@
+﻿cayleypy.MatrixGroups
+=====================
+
+.. currentmodule:: cayleypy
+
+.. autoclass:: MatrixGroups
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MatrixGroups.__init__
+      ~MatrixGroups.heisenberg
+   
+   
+
+   
+   
+   

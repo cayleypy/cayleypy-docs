@@ -1,0 +1,35 @@
+﻿cayleypy.CayleyGraph
+====================
+
+.. currentmodule:: cayleypy
+
+.. autoclass:: CayleyGraph
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CayleyGraph.__init__
+      ~CayleyGraph.bfs
+      ~CayleyGraph.decode_states
+      ~CayleyGraph.encode_states
+      ~CayleyGraph.free_memory
+      ~CayleyGraph.get_neighbors
+      ~CayleyGraph.get_unique_states
+      ~CayleyGraph.to_networkx_graph
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CayleyGraph.generators
+   
+   

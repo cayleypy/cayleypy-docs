@@ -1,0 +1,52 @@
+﻿cayleypy.BfsResult
+==================
+
+.. currentmodule:: cayleypy
+
+.. autoclass:: BfsResult
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BfsResult.__init__
+      ~BfsResult.adjacency_matrix
+      ~BfsResult.adjacency_matrix_sparse
+      ~BfsResult.diameter
+      ~BfsResult.get_edge_name
+      ~BfsResult.get_layer
+      ~BfsResult.has_edges_list_hashes
+      ~BfsResult.has_vertices_hashes
+      ~BfsResult.last_layer
+      ~BfsResult.load
+      ~BfsResult.named_undirected_edges
+      ~BfsResult.save
+      ~BfsResult.to_device
+      ~BfsResult.to_networkx_graph
+      ~BfsResult.vertex_name
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BfsResult.all_states
+      ~BfsResult.edges_list
+      ~BfsResult.hashes_to_indices_dict
+      ~BfsResult.num_vertices
+      ~BfsResult.vertex_names
+      ~BfsResult.bfs_completed
+      ~BfsResult.layer_sizes
+      ~BfsResult.layers
+      ~BfsResult.vertices_hashes
+      ~BfsResult.edges_list_hashes
+      ~BfsResult.graph
+   
+   
