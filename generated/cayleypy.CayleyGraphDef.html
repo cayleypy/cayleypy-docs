@@ -89,7 +89,7 @@
 <h1>cayleypy.CayleyGraphDef<a class="headerlink" href="#cayleypy-cayleygraphdef" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraphDef">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">CayleyGraphDef</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L81-L230"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">CayleyGraphDef</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L81-L234"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef" title="Link to this definition"></a></dt>
 <dd><p>Mathematical definition of a CayleyGraph.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraphDef.__init__">
@@ -108,13 +108,16 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.CayleyGraphDef.for_matrix_group" title="cayleypy.CayleyGraphDef.for_matrix_group"><code class="xref py py-obj docutils literal notranslate"><span class="pre">for_matrix_group</span></code></a>(*, generators[, ...])</p></td>
 <td><p>Creates Cayley Graph definition (when generators are matrices).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.CayleyGraphDef.is_permutation_group" title="cayleypy.CayleyGraphDef.is_permutation_group"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_permutation_group</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.CayleyGraphDef.is_matrix_group" title="cayleypy.CayleyGraphDef.is_matrix_group"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_matrix_group</span></code></a>()</p></td>
+<td><p>Whether generators in this graph are matrices.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.CayleyGraphDef.is_permutation_group" title="cayleypy.CayleyGraphDef.is_permutation_group"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_permutation_group</span></code></a>()</p></td>
 <td><p>Whether generators in this graph are permutations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_central_state</span></code>(central_state)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_central_state</span></code>(central_state)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">with_central_state</span></code>(central_state)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">with_central_state</span></code>(central_state)</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -195,6 +198,12 @@ If None, defaults to the identity permutation of size n.</p></li>
 <dt class="sig sig-object py" id="cayleypy.CayleyGraphDef.generators_inverse_closed">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generators_inverse_closed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#cayleypy.CayleyGraphDef.generators_inverse_closed" title="Link to this definition"></a></dt>
 <dd><p>Whether for each generator its inverse is also a generator.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.CayleyGraphDef.is_matrix_group">
+<span class="sig-name descname"><span class="pre">is_matrix_group</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L232-L234"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef.is_matrix_group" title="Link to this definition"></a></dt>
+<dd><p>Whether generators in this graph are matrices.</p>
 </dd></dl>
 
 <dl class="py method">
