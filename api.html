@@ -51,12 +51,17 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.BfsResult.html">cayleypy.BfsResult</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#graph-library">Graph library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#graphs-library">Graphs library</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.PermutationGroups.html">cayleypy.PermutationGroups</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.MatrixGroups.html">cayleypy.MatrixGroups</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#algorithms">Algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#beam-search">Beam search</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.BeamSearchResult.html">cayleypy.BeamSearchResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.Predictor.html">cayleypy.Predictor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#special-bfs-algorithms">Special BFS algorithms</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.bfs_bitmask.html">cayleypy.bfs_bitmask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.bfs_numpy.html">cayleypy.bfs_numpy</a></li>
 </ul>
@@ -109,8 +114,8 @@
 </tbody>
 </table>
 </section>
-<section id="graph-library">
-<h2>Graph library<a class="headerlink" href="#graph-library" title="Link to this heading"></a></h2>
+<section id="graphs-library">
+<h2>Graphs library<a class="headerlink" href="#graphs-library" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.PermutationGroups.html#cayleypy.PermutationGroups" title="cayleypy.PermutationGroups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.PermutationGroups</span></code></a></p></td>
@@ -122,8 +127,21 @@
 </tbody>
 </table>
 </section>
-<section id="algorithms">
-<h2>Algorithms<a class="headerlink" href="#algorithms" title="Link to this heading"></a></h2>
+<section id="beam-search">
+<h2>Beam search<a class="headerlink" href="#beam-search" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.BeamSearchResult.html#cayleypy.BeamSearchResult" title="cayleypy.BeamSearchResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.BeamSearchResult</span></code></a></p></td>
+<td><p>Result of running <cite>CayleyGraph.beam_search</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.Predictor.html#cayleypy.Predictor" title="cayleypy.Predictor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.Predictor</span></code></a></p></td>
+<td><p>Abstract class representing a &quot;black box&quot; that estimates distance for states from central state.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="special-bfs-algorithms">
+<h2>Special BFS algorithms<a class="headerlink" href="#special-bfs-algorithms" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.bfs_bitmask.html#cayleypy.bfs_bitmask" title="cayleypy.bfs_bitmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.bfs_bitmask</span></code></a>(graph[, max_diameter])</p></td>

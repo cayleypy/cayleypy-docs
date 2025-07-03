@@ -14,11 +14,14 @@
    .. autosummary::
    
       ~CayleyGraph.__init__
+      ~CayleyGraph.apply_path
+      ~CayleyGraph.beam_search
       ~CayleyGraph.bfs
       ~CayleyGraph.decode_states
       ~CayleyGraph.encode_states
       ~CayleyGraph.free_memory
       ~CayleyGraph.get_neighbors
+      ~CayleyGraph.get_neighbors_decoded
       ~CayleyGraph.get_unique_states
       ~CayleyGraph.random_walks
       ~CayleyGraph.to_networkx_graph

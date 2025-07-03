@@ -1,0 +1,32 @@
+﻿cayleypy.BeamSearchResult
+=========================
+
+.. currentmodule:: cayleypy
+
+.. autoclass:: BeamSearchResult
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BeamSearchResult.__init__
+      ~BeamSearchResult.get_path_as_string
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BeamSearchResult.path_found
+      ~BeamSearchResult.path_length
+      ~BeamSearchResult.path
+      ~BeamSearchResult.graph
+   
+   

@@ -20,6 +20,7 @@
       ~CayleyGraphDef.is_permutation_group
       ~CayleyGraphDef.normalize_central_state
       ~CayleyGraphDef.with_central_state
+      ~CayleyGraphDef.with_inverted_generators
    
    
 
