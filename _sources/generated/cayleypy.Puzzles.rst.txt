@@ -1,0 +1,29 @@
+﻿cayleypy.Puzzles
+================
+
+.. currentmodule:: cayleypy
+
+.. autoclass:: Puzzles
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Puzzles.__init__
+      ~Puzzles.globe_puzzle
+      ~Puzzles.hungarian_rings
+      ~Puzzles.megaminx
+      ~Puzzles.mini_pyramorphix
+      ~Puzzles.pyraminx
+      ~Puzzles.rubik_cube
+      ~Puzzles.starminx
+   
+   
+
+   
+   
+   
