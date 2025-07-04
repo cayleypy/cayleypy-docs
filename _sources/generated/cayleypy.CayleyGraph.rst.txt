@@ -22,7 +22,6 @@
       ~CayleyGraph.free_memory
       ~CayleyGraph.get_neighbors
       ~CayleyGraph.get_neighbors_decoded
-      ~CayleyGraph.get_unique_states
       ~CayleyGraph.random_walks
       ~CayleyGraph.to_networkx_graph
    
