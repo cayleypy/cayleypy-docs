@@ -14,9 +14,6 @@
    .. autosummary::
    
       ~Predictor.__init__
-      ~Predictor.const
-      ~Predictor.estimate_distance_to_central_state
-      ~Predictor.hamming
    
    
 

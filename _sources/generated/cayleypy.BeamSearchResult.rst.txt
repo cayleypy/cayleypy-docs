@@ -27,6 +27,7 @@
       ~BeamSearchResult.path_found
       ~BeamSearchResult.path_length
       ~BeamSearchResult.path
+      ~BeamSearchResult.debug_scores
       ~BeamSearchResult.graph
    
    
