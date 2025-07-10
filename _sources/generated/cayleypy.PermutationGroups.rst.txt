@@ -24,6 +24,7 @@
       ~PermutationGroups.lrx
       ~PermutationGroups.lx
       ~PermutationGroups.pancake
+      ~PermutationGroups.rapaport_m1
       ~PermutationGroups.rapaport_m2
       ~PermutationGroups.signed_reversals
       ~PermutationGroups.three_cycles
