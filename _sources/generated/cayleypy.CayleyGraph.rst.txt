@@ -19,6 +19,8 @@
       ~CayleyGraph.bfs
       ~CayleyGraph.decode_states
       ~CayleyGraph.encode_states
+      ~CayleyGraph.find_path_from
+      ~CayleyGraph.find_path_to
       ~CayleyGraph.free_memory
       ~CayleyGraph.get_neighbors
       ~CayleyGraph.get_neighbors_decoded
