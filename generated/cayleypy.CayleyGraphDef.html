@@ -90,7 +90,7 @@
 <h1>cayleypy.CayleyGraphDef<a class="headerlink" href="#cayleypy-cayleygraphdef" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraphDef">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">CayleyGraphDef</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L94-L267"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">CayleyGraphDef</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L94-L294"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef" title="Link to this definition"></a></dt>
 <dd><p>Mathematical definition of a CayleyGraph.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraphDef.__init__">
@@ -118,6 +118,12 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_central_state</span></code>(central_state)</p></td>
 <td><p></p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">path_to_string</span></code>(path[, delimiter])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.CayleyGraphDef.revert_path" title="cayleypy.CayleyGraphDef.revert_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">revert_path</span></code></a>(path)</p></td>
+<td><p>Given path A-&gt;B, returns path B-&gt;A.</p></td>
+</tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">with_central_state</span></code>(central_state)</p></td>
 <td><p></p></td>
 </tr>
@@ -138,25 +144,28 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.CayleyGraphDef.generators_inverse_closed" title="cayleypy.CayleyGraphDef.generators_inverse_closed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generators_inverse_closed</span></code></a></p></td>
 <td><p>Whether for each generator its inverse is also a generator.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_generators</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.CayleyGraphDef.generators_inverse_map" title="cayleypy.CayleyGraphDef.generators_inverse_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generators_inverse_map</span></code></a></p></td>
+<td><p>Maps generators to their inverses.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_generators</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_size</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_size</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generators_type</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generators_type</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generators_permutations</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generators_permutations</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generators_matrices</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generators_matrices</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generator_names</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generator_names</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">central_state</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">central_state</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -204,21 +213,33 @@ If None, defaults to the identity permutation of size n.</p></li>
 <dd><p>Whether for each generator its inverse is also a generator.</p>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="cayleypy.CayleyGraphDef.generators_inverse_map">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generators_inverse_map</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#cayleypy.CayleyGraphDef.generators_inverse_map" title="Link to this definition"></a></dt>
+<dd><p>Maps generators to their inverses. Returns None if generators are not inverse-closed.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraphDef.is_matrix_group">
-<span class="sig-name descname"><span class="pre">is_matrix_group</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L248-L250"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef.is_matrix_group" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">is_matrix_group</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L266-L268"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef.is_matrix_group" title="Link to this definition"></a></dt>
 <dd><p>Whether generators in this graph are matrices.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraphDef.is_permutation_group">
-<span class="sig-name descname"><span class="pre">is_permutation_group</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L244-L246"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef.is_permutation_group" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">is_permutation_group</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L262-L264"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef.is_permutation_group" title="Link to this definition"></a></dt>
 <dd><p>Whether generators in this graph are permutations.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.CayleyGraphDef.revert_path">
+<span class="sig-name descname"><span class="pre">revert_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L290-L294"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef.revert_path" title="Link to this definition"></a></dt>
+<dd><p>Given path A-&gt;B, returns path B-&gt;A. Only for inverse-closed generators.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraphDef.with_inverted_generators">
-<span class="sig-name descname"><span class="pre">with_inverted_generators</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cayleypy.CayleyGraphDef" title="cayleypy.cayley_graph_def.CayleyGraphDef"><span class="pre">CayleyGraphDef</span></a></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L252-L267"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef.with_inverted_generators" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">with_inverted_generators</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cayleypy.CayleyGraphDef" title="cayleypy.cayley_graph_def.CayleyGraphDef"><span class="pre">CayleyGraphDef</span></a></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph_def.py#L270-L285"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraphDef.with_inverted_generators" title="Link to this definition"></a></dt>
 <dd><p>Returns the same graph where generators are replaced with inverses (in the same order).</p>
 <p>This is needed for restoring path in the Beam Search algorithm.</p>
 </dd></dl>
