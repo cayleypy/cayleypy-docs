@@ -90,7 +90,7 @@
 <h1>cayleypy.CayleyGraph<a class="headerlink" href="#cayleypy-cayleygraph" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraph">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">CayleyGraph</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph.py#L17-L583"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraph" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">CayleyGraph</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph.py#L17-L537"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraph" title="Link to this definition"></a></dt>
 <dd><p>Represents a Schreier coset graph for some group.</p>
 <dl class="simple">
 <dt>In this graph:</dt><dd><ul class="simple">
@@ -165,12 +165,6 @@ to the “free memory” function.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.CayleyGraph.encode_states" title="cayleypy.CayleyGraph.encode_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">encode_states</span></code></a>(states)</p></td>
 <td><p>Converts states from human-readable to internal representation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.CayleyGraph.find_path_from" title="cayleypy.CayleyGraph.find_path_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_path_from</span></code></a>(start_state, bfs_result)</p></td>
-<td><p>Finds path from start_state to central_state using pre-computed BfsResult.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.CayleyGraph.find_path_to" title="cayleypy.CayleyGraph.find_path_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_path_to</span></code></a>(end_state, bfs_result)</p></td>
-<td><p>Finds path from central_state to end_state using pre-computed BfsResult.</p></td>
-</tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">free_memory</span></code>()</p></td>
 <td><p></p></td>
 </tr>
@@ -229,7 +223,7 @@ Defaults to Hamming distance heuristic.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>BeamSearchResult containing found path length and (optionally) the path itself.</p>
+<dd class="field-even"><p>BeamSearchResult containing found path length and 9optionally) the path itself.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -280,41 +274,6 @@ First and last layers are always stored.</p></li>
 <dt class="sig sig-object py" id="cayleypy.CayleyGraph.encode_states">
 <span class="sig-name descname"><span class="pre">encode_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph.py#L128-L134"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraph.encode_states" title="Link to this definition"></a></dt>
 <dd><p>Converts states from human-readable to internal representation.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cayleypy.CayleyGraph.find_path_from">
-<span class="sig-name descname"><span class="pre">find_path_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bfs_result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.BfsResult.html#cayleypy.BfsResult" title="cayleypy.bfs_result.BfsResult"><span class="pre">BfsResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph.py#L550-L565"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraph.find_path_from" title="Link to this definition"></a></dt>
-<dd><p>Finds path from start_state to central_state using pre-computed BfsResult.</p>
-<p>This is possible only for inverse-closed generators.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>start_state</strong> – First state of the path.</p></li>
-<li><p><strong>bfs_result</strong> – Pre-computed BFS result (call <cite>bfs(return_all_hashes=True)</cite> to get this).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The found path (list of generator ids), or None if central_state is not reachable from start_state.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="cayleypy.CayleyGraph.find_path_to">
-<span class="sig-name descname"><span class="pre">find_path_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">end_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bfs_result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.BfsResult.html#cayleypy.BfsResult" title="cayleypy.bfs_result.BfsResult"><span class="pre">BfsResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph.py#L529-L548"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraph.find_path_to" title="Link to this definition"></a></dt>
-<dd><p>Finds path from central_state to end_state using pre-computed BfsResult.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>end_state</strong> – Final state of the path.</p></li>
-<li><p><strong>bfs_result</strong> – Pre-computed BFS result (call <cite>bfs(return_all_hashes=True)</cite> to get this).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The found path (list of generator ids), or None if <cite>end_state</cite> is not reachable from <cite>start_state</cite>.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py property">

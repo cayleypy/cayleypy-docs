@@ -19,8 +19,6 @@
       ~CayleyGraphDef.is_matrix_group
       ~CayleyGraphDef.is_permutation_group
       ~CayleyGraphDef.normalize_central_state
-      ~CayleyGraphDef.path_to_string
-      ~CayleyGraphDef.revert_path
       ~CayleyGraphDef.with_central_state
       ~CayleyGraphDef.with_inverted_generators
    
@@ -35,7 +33,6 @@
       ~CayleyGraphDef.decoded_state_shape
       ~CayleyGraphDef.generators
       ~CayleyGraphDef.generators_inverse_closed
-      ~CayleyGraphDef.generators_inverse_map
       ~CayleyGraphDef.n_generators
       ~CayleyGraphDef.state_size
       ~CayleyGraphDef.generators_type
