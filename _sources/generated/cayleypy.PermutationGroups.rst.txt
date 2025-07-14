@@ -14,6 +14,7 @@
    .. autosummary::
    
       ~PermutationGroups.__init__
+      ~PermutationGroups.all_cycles
       ~PermutationGroups.all_transpositions
       ~PermutationGroups.burnt_pancake
       ~PermutationGroups.coxeter
