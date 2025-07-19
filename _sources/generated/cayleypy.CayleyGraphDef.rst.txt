@@ -18,6 +18,7 @@
       ~CayleyGraphDef.for_matrix_group
       ~CayleyGraphDef.is_matrix_group
       ~CayleyGraphDef.is_permutation_group
+      ~CayleyGraphDef.make_inverse_closed
       ~CayleyGraphDef.normalize_central_state
       ~CayleyGraphDef.path_to_string
       ~CayleyGraphDef.revert_path

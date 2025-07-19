@@ -1,0 +1,26 @@
+﻿cayleypy.GapPuzzles
+===================
+
+.. currentmodule:: cayleypy
+
+.. autoclass:: GapPuzzles
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GapPuzzles.__init__
+      ~GapPuzzles.get_gaps_dir
+      ~GapPuzzles.list_puzzles
+      ~GapPuzzles.load_puzzle_from_file
+      ~GapPuzzles.puzzle
+   
+   
+
+   
+   
+   
