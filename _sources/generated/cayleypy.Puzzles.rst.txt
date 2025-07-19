@@ -21,6 +21,7 @@
       ~Puzzles.pyraminx
       ~Puzzles.rubik_cube
       ~Puzzles.starminx
+      ~Puzzles.starminx_2
    
    
 
