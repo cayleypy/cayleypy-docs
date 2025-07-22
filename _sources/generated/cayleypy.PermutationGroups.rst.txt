@@ -31,6 +31,7 @@
       ~PermutationGroups.three_cycles
       ~PermutationGroups.three_cycles_0ij
       ~PermutationGroups.top_spin
+      ~PermutationGroups.wrapped_k_cycles
    
    
 
