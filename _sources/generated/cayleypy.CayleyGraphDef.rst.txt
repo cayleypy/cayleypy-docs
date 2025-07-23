@@ -24,6 +24,7 @@
       ~CayleyGraphDef.revert_path
       ~CayleyGraphDef.with_central_state
       ~CayleyGraphDef.with_inverted_generators
+      ~CayleyGraphDef.with_name
    
    
 
@@ -44,5 +45,6 @@
       ~CayleyGraphDef.generators_matrices
       ~CayleyGraphDef.generator_names
       ~CayleyGraphDef.central_state
+      ~CayleyGraphDef.name
    
    
