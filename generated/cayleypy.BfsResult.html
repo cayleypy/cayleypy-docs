@@ -90,7 +90,7 @@
 <h1>cayleypy.BfsResult<a class="headerlink" href="#cayleypy-bfsresult" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="cayleypy.BfsResult">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">BfsResult</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L12-L271"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">BfsResult</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L12-L282"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult" title="Link to this definition"></a></dt>
 <dd><p>Result of running breadth-first search on a Schreier coset graph.</p>
 <p>Can be used to obtain the graph explicitly. In this case, vertices are numbered sequentially in the order in which
 they are visited by BFS.</p>
@@ -161,28 +161,31 @@ they are visited by BFS.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.hashes_to_indices_dict" title="cayleypy.BfsResult.hashes_to_indices_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hashes_to_indices_dict</span></code></a></p></td>
 <td><p>Dictionary used to remap vertex hashes to indexes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.num_vertices" title="cayleypy.BfsResult.num_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_vertices</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.layers_hashes" title="cayleypy.BfsResult.layers_hashes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layers_hashes</span></code></a></p></td>
+<td><p>Returns sorted hashes of each layer (without making copies).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.num_vertices" title="cayleypy.BfsResult.num_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_vertices</span></code></a></p></td>
 <td><p>Number of vertices in the graph.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.vertex_names" title="cayleypy.BfsResult.vertex_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex_names</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.vertex_names" title="cayleypy.BfsResult.vertex_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex_names</span></code></a></p></td>
 <td><p>Returns names for vertices in the graph.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfs_completed</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfs_completed</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">layer_sizes</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">layer_sizes</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">layers</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">layers</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertices_hashes</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertices_hashes</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_list_hashes</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_list_hashes</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">graph</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">graph</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -239,6 +242,12 @@ they are visited by BFS.</p>
 <dt class="sig sig-object py" id="cayleypy.BfsResult.last_layer">
 <span class="sig-name descname"><span class="pre">last_layer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L143-L145"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.last_layer" title="Link to this definition"></a></dt>
 <dd><p>Returns last layer, formatted as set of strings.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.layers_hashes">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">layers_hashes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cayleypy.BfsResult.layers_hashes" title="Link to this definition"></a></dt>
+<dd><p>Returns sorted hashes of each layer (without making copies).</p>
 </dd></dl>
 
 <dl class="py method">

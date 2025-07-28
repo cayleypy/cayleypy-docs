@@ -40,6 +40,7 @@
       ~BfsResult.all_states
       ~BfsResult.edges_list
       ~BfsResult.hashes_to_indices_dict
+      ~BfsResult.layers_hashes
       ~BfsResult.num_vertices
       ~BfsResult.vertex_names
       ~BfsResult.bfs_completed
