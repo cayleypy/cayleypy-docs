@@ -25,6 +25,7 @@
       ~CayleyGraph.get_neighbors
       ~CayleyGraph.get_neighbors_decoded
       ~CayleyGraph.random_walks
+      ~CayleyGraph.restore_path
       ~CayleyGraph.to_networkx_graph
    
    

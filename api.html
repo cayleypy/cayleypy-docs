@@ -65,6 +65,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#special-bfs-algorithms">Special BFS algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.find_path_bfs_mitm.html">cayleypy.algo.find_path_bfs_mitm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.bfs_bitmask.html">cayleypy.bfs_bitmask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.bfs_numpy.html">cayleypy.bfs_numpy</a></li>
 </ul>
@@ -156,10 +157,13 @@
 <h2>Special BFS algorithms<a class="headerlink" href="#special-bfs-algorithms" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.bfs_bitmask.html#cayleypy.bfs_bitmask" title="cayleypy.bfs_bitmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.bfs_bitmask</span></code></a>(graph[, max_diameter])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.algo.find_path_bfs_mitm.html#cayleypy.algo.find_path_bfs_mitm" title="cayleypy.algo.find_path_bfs_mitm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.find_path_bfs_mitm</span></code></a>(graph, ...)</p></td>
+<td><p>Finds path from <code class="docutils literal notranslate"><span class="pre">start_state</span></code> to central state using Meet-in-the-Middle algorithm and precomputed BFS result.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.bfs_bitmask.html#cayleypy.bfs_bitmask" title="cayleypy.bfs_bitmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.bfs_bitmask</span></code></a>(graph[, max_diameter])</p></td>
 <td><p>Version of BFS storing all vertices explicitly as bitmasks, using 3 bits of memory per state.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.bfs_numpy.html#cayleypy.bfs_numpy" title="cayleypy.bfs_numpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.bfs_numpy</span></code></a>(graph[, max_diameter])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.bfs_numpy.html#cayleypy.bfs_numpy" title="cayleypy.bfs_numpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.bfs_numpy</span></code></a>(graph[, max_diameter])</p></td>
 <td><p>Simple version of BFS (from destination_state) using numpy, optimized for memory usage.</p></td>
 </tr>
 </tbody>

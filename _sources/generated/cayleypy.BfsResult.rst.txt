@@ -16,11 +16,11 @@
       ~BfsResult.__init__
       ~BfsResult.adjacency_matrix
       ~BfsResult.adjacency_matrix_sparse
+      ~BfsResult.check_has_layer_hashes
       ~BfsResult.diameter
       ~BfsResult.get_edge_name
       ~BfsResult.get_layer
       ~BfsResult.has_edges_list_hashes
-      ~BfsResult.has_vertices_hashes
       ~BfsResult.last_layer
       ~BfsResult.load
       ~BfsResult.named_undirected_edges
@@ -40,13 +40,12 @@
       ~BfsResult.all_states
       ~BfsResult.edges_list
       ~BfsResult.hashes_to_indices_dict
-      ~BfsResult.layers_hashes
       ~BfsResult.num_vertices
       ~BfsResult.vertex_names
       ~BfsResult.bfs_completed
       ~BfsResult.layer_sizes
       ~BfsResult.layers
-      ~BfsResult.vertices_hashes
+      ~BfsResult.layers_hashes
       ~BfsResult.edges_list_hashes
       ~BfsResult.graph
    
