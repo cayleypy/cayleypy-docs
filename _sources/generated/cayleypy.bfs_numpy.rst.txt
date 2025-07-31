@@ -1,6 +1,0 @@
-﻿cayleypy.bfs\_numpy
-===================
-
-.. currentmodule:: cayleypy
-
-.. autofunction:: bfs_numpy

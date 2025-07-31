@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cayleypy.bfs_numpy &mdash; CayleyPy  documentation</title>
+  <title>cayleypy.algo.bfs_numpy &mdash; CayleyPy  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
@@ -20,7 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="cayleypy.bfs_bitmask" href="cayleypy.bfs_bitmask.html" /> 
+    <link rel="next" title="cayleypy.algo.find_path_bfs_mitm" href="cayleypy.algo.find_path_bfs_mitm.html" />
+    <link rel="prev" title="cayleypy.algo.bfs_bitmask" href="cayleypy.algo.bfs_bitmask.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,13 +48,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../api.html#core-classes">Core classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api.html#graphs-library">Graphs library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api.html#beam-search-and-ml">Beam search and ML</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../api.html#special-bfs-algorithms">Special BFS algorithms</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.find_path_bfs_mitm.html">cayleypy.algo.find_path_bfs_mitm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cayleypy.bfs_bitmask.html">cayleypy.bfs_bitmask</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">cayleypy.bfs_numpy</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#cayleypy.bfs_numpy"><code class="docutils literal notranslate"><span class="pre">bfs_numpy()</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#special-algorithms">Special algorithms</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.bfs_bitmask.html">cayleypy.algo.bfs_bitmask</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">cayleypy.algo.bfs_numpy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cayleypy.algo.bfs_numpy"><code class="docutils literal notranslate"><span class="pre">bfs_numpy()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.find_path_bfs_mitm.html">cayleypy.algo.find_path_bfs_mitm</a></li>
 </ul>
 </li>
 </ul>
@@ -75,9 +76,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api.html">CayleyPy API Reference</a></li>
-      <li class="breadcrumb-item active">cayleypy.bfs_numpy</li>
+      <li class="breadcrumb-item active">cayleypy.algo.bfs_numpy</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/generated/cayleypy.bfs_numpy.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/generated/cayleypy.algo.bfs_numpy.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -85,11 +86,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="cayleypy-bfs-numpy">
-<h1>cayleypy.bfs_numpy<a class="headerlink" href="#cayleypy-bfs-numpy" title="Link to this heading"></a></h1>
+  <section id="cayleypy-algo-bfs-numpy">
+<h1>cayleypy.algo.bfs_numpy<a class="headerlink" href="#cayleypy-algo-bfs-numpy" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="cayleypy.bfs_numpy">
-<span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">bfs_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.CayleyGraph.html#cayleypy.CayleyGraph" title="cayleypy.cayley_graph.CayleyGraph"><span class="pre">CayleyGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_diameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_numpy.py#L9-L61"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.bfs_numpy" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="cayleypy.algo.bfs_numpy">
+<span class="sig-prename descclassname"><span class="pre">cayleypy.algo.</span></span><span class="sig-name descname"><span class="pre">bfs_numpy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.CayleyGraph.html#cayleypy.CayleyGraph" title="cayleypy.cayley_graph.CayleyGraph"><span class="pre">CayleyGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_diameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/bfs_numpy.py#L9-L61"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.bfs_numpy" title="Link to this definition"></a></dt>
 <dd><p>Simple version of BFS (from destination_state) using numpy, optimized for memory usage.</p>
 </dd></dl>
 
@@ -99,7 +100,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="cayleypy.bfs_bitmask.html" class="btn btn-neutral float-left" title="cayleypy.bfs_bitmask" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cayleypy.algo.bfs_bitmask.html" class="btn btn-neutral float-left" title="cayleypy.algo.bfs_bitmask" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cayleypy.algo.find_path_bfs_mitm.html" class="btn btn-neutral float-right" title="cayleypy.algo.find_path_bfs_mitm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1,0 +1,6 @@
+﻿cayleypy.algo.bfs\_bitmask
+==========================
+
+.. currentmodule:: cayleypy.algo
+
+.. autofunction:: bfs_bitmask

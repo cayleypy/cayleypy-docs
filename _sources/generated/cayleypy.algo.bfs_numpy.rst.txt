@@ -1,0 +1,6 @@
+﻿cayleypy.algo.bfs\_numpy
+========================
+
+.. currentmodule:: cayleypy.algo
+
+.. autofunction:: bfs_numpy
