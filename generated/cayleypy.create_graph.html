@@ -93,12 +93,13 @@
 <h1>cayleypy.create_graph<a class="headerlink" href="#cayleypy-create-graph" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="cayleypy.create_graph">
-<span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">create_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="cayleypy.CayleyGraph.html#cayleypy.CayleyGraph" title="cayleypy.cayley_graph.CayleyGraph"><span class="pre">CayleyGraph</span></a></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/create_graph.py#L5-L22"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.create_graph" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">create_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="cayleypy.CayleyGraph.html#cayleypy.CayleyGraph" title="cayleypy.cayley_graph.CayleyGraph"><span class="pre">CayleyGraph</span></a></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/create_graph.py#L5-L26"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.create_graph" title="Link to this definition"></a></dt>
 <dd><p>Creates CayleyGraph from kwargs.</p>
 <dl class="simple">
 <dt>Pass the following to kwargs:</dt><dd><ul class="simple">
 <li><p>“name” - the name of the graph, mandatory, see <code class="docutils literal notranslate"><span class="pre">prepare_graph</span></code> source for supported names,</p></li>
 <li><p>other parameters of the graph (such as “n”) that will be passed to <code class="docutils literal notranslate"><span class="pre">prepare_graph</span></code>,</p></li>
+<li><p>“central_state” - central state, if you need to override it,</p></li>
 <li><p>any arguments that are accepted by <code class="docutils literal notranslate"><span class="pre">CayleyGraph</span></code> constructor (e.g. <code class="docutils literal notranslate"><span class="pre">verbose=2</span></code>).</p></li>
 </ul>
 </dd>
