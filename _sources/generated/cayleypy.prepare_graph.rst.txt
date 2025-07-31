@@ -1,0 +1,6 @@
+﻿cayleypy.prepare\_graph
+=======================
+
+.. currentmodule:: cayleypy
+
+.. autofunction:: prepare_graph

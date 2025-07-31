@@ -27,6 +27,7 @@
       ~CayleyGraph.random_walks
       ~CayleyGraph.restore_path
       ~CayleyGraph.to_networkx_graph
+      ~CayleyGraph.validate_path
    
    
 

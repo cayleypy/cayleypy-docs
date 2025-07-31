@@ -1,0 +1,6 @@
+﻿cayleypy.find\_path
+===================
+
+.. currentmodule:: cayleypy
+
+.. autofunction:: find_path

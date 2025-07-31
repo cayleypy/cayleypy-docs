@@ -45,10 +45,11 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">CayleyPy API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#core-classes">Core classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#core-classes-and-functions">Core classes and functions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.CayleyGraphDef.html">cayleypy.CayleyGraphDef</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.CayleyGraph.html">cayleypy.CayleyGraph</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.BfsResult.html">cayleypy.BfsResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.find_path.html">cayleypy.find_path</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#graphs-library">Graphs library</a><ul>
@@ -56,6 +57,8 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.MatrixGroups.html">cayleypy.MatrixGroups</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.Puzzles.html">cayleypy.Puzzles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.GapPuzzles.html">cayleypy.GapPuzzles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.create_graph.html">cayleypy.create_graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.prepare_graph.html">cayleypy.prepare_graph</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#beam-search-and-ml">Beam search and ML</a><ul>
@@ -100,8 +103,8 @@
              
   <section id="cayleypy-api-reference">
 <h1>CayleyPy API Reference<a class="headerlink" href="#cayleypy-api-reference" title="Link to this heading"></a></h1>
-<section id="core-classes">
-<h2>Core classes<a class="headerlink" href="#core-classes" title="Link to this heading"></a></h2>
+<section id="core-classes-and-functions">
+<h2>Core classes and functions<a class="headerlink" href="#core-classes-and-functions" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 </div>
 <table class="autosummary longtable docutils align-default">
@@ -114,6 +117,9 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.BfsResult.html#cayleypy.BfsResult" title="cayleypy.BfsResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.BfsResult</span></code></a></p></td>
 <td><p>Result of running breadth-first search on a Schreier coset graph.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.find_path.html#cayleypy.find_path" title="cayleypy.find_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.find_path</span></code></a>(graph, start_state, **kwargs)</p></td>
+<td><p>Finds path from <code class="docutils literal notranslate"><span class="pre">start_state</span></code> to central state.</p></td>
 </tr>
 </tbody>
 </table>
@@ -133,6 +139,12 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.GapPuzzles.html#cayleypy.GapPuzzles" title="cayleypy.GapPuzzles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.GapPuzzles</span></code></a></p></td>
 <td><p>Library of puzzles defined in GAP format.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.create_graph.html#cayleypy.create_graph" title="cayleypy.create_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.create_graph</span></code></a>(**kwargs)</p></td>
+<td><p>Creates CayleyGraph from kwargs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.prepare_graph.html#cayleypy.prepare_graph" title="cayleypy.prepare_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.prepare_graph</span></code></a>(name[, n])</p></td>
+<td><p>Returns pre-defined CayleyGraphDef by codename and additional kwargs.</p></td>
 </tr>
 </tbody>
 </table>

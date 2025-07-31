@@ -1,0 +1,6 @@
+﻿cayleypy.create\_graph
+======================
+
+.. currentmodule:: cayleypy
+
+.. autofunction:: create_graph
