@@ -22,6 +22,7 @@
       ~PermutationGroups.cyclic_coxeter
       ~PermutationGroups.derangements
       ~PermutationGroups.full_reversals
+      ~PermutationGroups.involutive_derangements
       ~PermutationGroups.lrx
       ~PermutationGroups.lx
       ~PermutationGroups.pancake
