@@ -1,7 +1,7 @@
-﻿cayleypy.BeamSearchResult
-=========================
+﻿cayleypy.algo.BeamSearchResult
+==============================
 
-.. currentmodule:: cayleypy
+.. currentmodule:: cayleypy.algo
 
 .. autoclass:: BeamSearchResult
 
