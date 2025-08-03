@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cayleypy.algo.RandomWalksGenerator &mdash; CayleyPy  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cayleypy.algo.BeamSearchAlgorithm" href="cayleypy.algo.BeamSearchAlgorithm.html" />
+    <link rel="prev" title="cayleypy.models.ModelConfig" href="cayleypy.models.ModelConfig.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CayleyPy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">CayleyPy API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api.html#core-classes-and-functions">Core classes and functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#graphs-library">Graphs library</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#beam-search-and-ml">Beam search and ML</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.BeamSearchResult.html">cayleypy.BeamSearchResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.Predictor.html">cayleypy.Predictor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.models.ModelConfig.html">cayleypy.models.ModelConfig</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">cayleypy.algo.RandomWalksGenerator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator"><code class="docutils literal notranslate"><span class="pre">RandomWalksGenerator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.BeamSearchAlgorithm.html">cayleypy.algo.BeamSearchAlgorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#special-algorithms">Special algorithms</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CayleyPy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">CayleyPy API Reference</a></li>
+      <li class="breadcrumb-item active">cayleypy.algo.RandomWalksGenerator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/cayleypy.algo.RandomWalksGenerator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cayleypy-algo-randomwalksgenerator">
+<h1>cayleypy.algo.RandomWalksGenerator<a class="headerlink" href="#cayleypy-algo-randomwalksgenerator" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.algo.</span></span><span class="sig-name descname"><span class="pre">RandomWalksGenerator</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L14-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator" title="Link to this definition"></a></dt>
+<dd><p>Generator for random walks on Cayley graphs.</p>
+<p>This class encapsulates the logic for generating random walks using different modes:
+- “classic”: Simple random walks with independent steps
+- “bfs”: Breadth-first search based random walks with uniqueness constraints</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.CayleyGraph.html#cayleypy.CayleyGraph" title="cayleypy.CayleyGraph"><span class="pre">CayleyGraph</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L22-L30"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize the random walks generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>graph</strong> – The Cayley graph to generate walks on</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.__init__" title="cayleypy.algo.RandomWalksGenerator.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(graph)</p></td>
+<td><p>Initialize the random walks generator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.generate" title="cayleypy.algo.RandomWalksGenerator.generate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate</span></code></a>(*[, width, length, mode, start_state])</p></td>
+<td><p>Generates random walks on the graph.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.random_walks_bfs" title="cayleypy.algo.RandomWalksGenerator.random_walks_bfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random_walks_bfs</span></code></a>(width, length, start_state)</p></td>
+<td><p>Generate BFS-based random walks.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.random_walks_classic" title="cayleypy.algo.RandomWalksGenerator.random_walks_classic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random_walks_classic</span></code></a>(width, length, start_state)</p></td>
+<td><p>Generate classic random walks.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'classic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L32-L74"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.generate" title="Link to this definition"></a></dt>
+<dd><p>Generates random walks on the graph.</p>
+<p>The following modes of random walk generation are supported:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>“classic” - random walk is a path in this graph starting from <cite>start_state</cite>, where on each step the next
+edge is chosen randomly with equal probability. We generate <cite>width</cite> such random walks independently.
+The output will have exactly <code class="docutils literal notranslate"><span class="pre">width*length</span></code> states.
+i-th random walk can be extracted as: <code class="docutils literal notranslate"><span class="pre">[x[i+j*width]</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">range(length)]</span></code>.
+<code class="docutils literal notranslate"><span class="pre">y[i]</span></code> is equal to number of random steps it took to get to state <code class="docutils literal notranslate"><span class="pre">x[i]</span></code>.
+Note that in this mode a lot of states will have overestimated distance (meaning <code class="docutils literal notranslate"><span class="pre">y[i]</span></code> may be larger than
+the length of the shortest path from <code class="docutils literal notranslate"><span class="pre">x[i]</span></code> to <cite>start_state</cite>).
+The same state may appear multiple times with different distance in <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+<li><p>“bfs” - we perform Breadth First Search starting from <code class="docutils literal notranslate"><span class="pre">start_state</span></code> with one modification: if size of
+next layer is larger than <code class="docutils literal notranslate"><span class="pre">width</span></code>, only <code class="docutils literal notranslate"><span class="pre">width</span></code> states (chosen randomly) will be kept.
+We also remove states from current layer if they appeared on some previous layer (so this also can be
+called “non-backtracking random walk”).
+All states in the output are unique. <code class="docutils literal notranslate"><span class="pre">y</span></code> still can be overestimated, but it will be closer to the true
+distance than in “classic” mode. Size of output is <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">width*length</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">length</span></code> are large enough (<code class="docutils literal notranslate"><span class="pre">width</span></code> at least as large as largest BFS layer, and
+<code class="docutils literal notranslate"><span class="pre">length</span> <span class="pre">&gt;=</span> <span class="pre">diameter</span></code>), this will return all states and true distances to the start state.</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – Number of random walks to generate.</p></li>
+<li><p><strong>length</strong> – Length of each random walk.</p></li>
+<li><p><strong>start_state</strong> – State from which to start random walk. Defaults to the central state.</p></li>
+<li><p><strong>mode</strong> – Type of random walk (see above). Defaults to “classic”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pair of tensors <code class="docutils literal notranslate"><span class="pre">x,</span> <span class="pre">y</span></code>. <code class="docutils literal notranslate"><span class="pre">x</span></code> contains states. <code class="docutils literal notranslate"><span class="pre">y[i]</span></code> is the estimated distance from start state
+to state <code class="docutils literal notranslate"><span class="pre">x[i]</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator.random_walks_bfs">
+<span class="sig-name descname"><span class="pre">random_walks_bfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L111-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.random_walks_bfs" title="Link to this definition"></a></dt>
+<dd><p>Generate BFS-based random walks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – Maximum number of states per layer</p></li>
+<li><p><strong>length</strong> – Maximum number of layers</p></li>
+<li><p><strong>start_state</strong> – Starting state for the BFS</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple of (states, distances)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator.random_walks_classic">
+<span class="sig-name descname"><span class="pre">random_walks_classic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L76-L109"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.random_walks_classic" title="Link to this definition"></a></dt>
+<dd><p>Generate classic random walks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – Number of random walks to generate</p></li>
+<li><p><strong>length</strong> – Length of each random walk</p></li>
+<li><p><strong>start_state</strong> – Starting state for all walks</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple of (states, distances)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cayleypy.models.ModelConfig.html" class="btn btn-neutral float-left" title="cayleypy.models.ModelConfig" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cayleypy.algo.BeamSearchAlgorithm.html" class="btn btn-neutral float-right" title="cayleypy.algo.BeamSearchAlgorithm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, CayleyPy Foundation.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

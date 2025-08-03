@@ -1,0 +1,25 @@
+﻿cayleypy.algo.RandomWalksGenerator
+==================================
+
+.. currentmodule:: cayleypy.algo
+
+.. autoclass:: RandomWalksGenerator
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RandomWalksGenerator.__init__
+      ~RandomWalksGenerator.generate
+      ~RandomWalksGenerator.random_walks_bfs
+      ~RandomWalksGenerator.random_walks_classic
+   
+   
+
+   
+   
+   

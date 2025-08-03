@@ -95,9 +95,13 @@
 <h2 id="_">_</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="generated/cayleypy.BeamSearchResult.html#cayleypy.BeamSearchResult.__init__">__init__() (cayleypy.BeamSearchResult method)</a>
+      <li><a href="generated/cayleypy.algo.BeamSearchAlgorithm.html#cayleypy.algo.BeamSearchAlgorithm.__init__">__init__() (cayleypy.algo.BeamSearchAlgorithm method)</a>
 
       <ul>
+        <li><a href="generated/cayleypy.algo.RandomWalksGenerator.html#cayleypy.algo.RandomWalksGenerator.__init__">(cayleypy.algo.RandomWalksGenerator method)</a>
+</li>
+        <li><a href="generated/cayleypy.BeamSearchResult.html#cayleypy.BeamSearchResult.__init__">(cayleypy.BeamSearchResult method)</a>
+</li>
         <li><a href="generated/cayleypy.BfsResult.html#cayleypy.BfsResult.__init__">(cayleypy.BfsResult method)</a>
 </li>
         <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.__init__">(cayleypy.CayleyGraph method)</a>
@@ -135,6 +139,8 @@
 </li>
       <li><a href="generated/cayleypy.PermutationGroups.html#cayleypy.PermutationGroups.all_transpositions">all_transpositions() (cayleypy.PermutationGroups static method)</a>
 </li>
+      <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.apply_generator_batched">apply_generator_batched() (cayleypy.CayleyGraph method)</a>
+</li>
       <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.apply_path">apply_path() (cayleypy.CayleyGraph method)</a>
 </li>
   </ul></td>
@@ -144,6 +150,8 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.beam_search">beam_search() (cayleypy.CayleyGraph method)</a>
+</li>
+      <li><a href="generated/cayleypy.algo.BeamSearchAlgorithm.html#cayleypy.algo.BeamSearchAlgorithm">BeamSearchAlgorithm (class in cayleypy.algo)</a>
 </li>
       <li><a href="generated/cayleypy.BeamSearchResult.html#cayleypy.BeamSearchResult">BeamSearchResult (class in cayleypy)</a>
 </li>
@@ -239,6 +247,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/cayleypy.GapPuzzles.html#cayleypy.GapPuzzles">GapPuzzles (class in cayleypy)</a>
 </li>
+      <li><a href="generated/cayleypy.algo.RandomWalksGenerator.html#cayleypy.algo.RandomWalksGenerator.generate">generate() (cayleypy.algo.RandomWalksGenerator method)</a>
+</li>
       <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.generators">generators (cayleypy.CayleyGraph property)</a>
 </li>
       <li><a href="generated/cayleypy.CayleyGraphDef.html#cayleypy.CayleyGraphDef.generators_inverse_closed">generators_inverse_closed (cayleypy.CayleyGraphDef property)</a>
@@ -256,6 +266,8 @@
       <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.get_neighbors">get_neighbors() (cayleypy.CayleyGraph method)</a>
 </li>
       <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.get_neighbors_decoded">get_neighbors_decoded() (cayleypy.CayleyGraph method)</a>
+</li>
+      <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.get_unique_states">get_unique_states() (cayleypy.CayleyGraph method)</a>
 </li>
       <li><a href="generated/cayleypy.Puzzles.html#cayleypy.Puzzles.globe_puzzle">globe_puzzle() (cayleypy.Puzzles static method)</a>
 </li>
@@ -369,12 +381,18 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.random_walks">random_walks() (cayleypy.CayleyGraph method)</a>
 </li>
+      <li><a href="generated/cayleypy.algo.RandomWalksGenerator.html#cayleypy.algo.RandomWalksGenerator.random_walks_bfs">random_walks_bfs() (cayleypy.algo.RandomWalksGenerator method)</a>
+</li>
+      <li><a href="generated/cayleypy.algo.RandomWalksGenerator.html#cayleypy.algo.RandomWalksGenerator.random_walks_classic">random_walks_classic() (cayleypy.algo.RandomWalksGenerator method)</a>
+</li>
+      <li><a href="generated/cayleypy.algo.RandomWalksGenerator.html#cayleypy.algo.RandomWalksGenerator">RandomWalksGenerator (class in cayleypy.algo)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/cayleypy.PermutationGroups.html#cayleypy.PermutationGroups.rapaport_m1">rapaport_m1() (cayleypy.PermutationGroups static method)</a>
 </li>
       <li><a href="generated/cayleypy.PermutationGroups.html#cayleypy.PermutationGroups.rapaport_m2">rapaport_m2() (cayleypy.PermutationGroups static method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph.restore_path">restore_path() (cayleypy.CayleyGraph method)</a>
 </li>
       <li><a href="generated/cayleypy.CayleyGraphDef.html#cayleypy.CayleyGraphDef.revert_path">revert_path() (cayleypy.CayleyGraphDef method)</a>
@@ -387,12 +405,14 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="generated/cayleypy.PermutationGroups.html#cayleypy.PermutationGroups.signed_reversals">signed_reversals() (cayleypy.PermutationGroups static method)</a>
+      <li><a href="generated/cayleypy.algo.BeamSearchAlgorithm.html#cayleypy.algo.BeamSearchAlgorithm.search">search() (cayleypy.algo.BeamSearchAlgorithm method)</a>
 </li>
-      <li><a href="generated/cayleypy.Puzzles.html#cayleypy.Puzzles.starminx">starminx() (cayleypy.Puzzles static method)</a>
+      <li><a href="generated/cayleypy.PermutationGroups.html#cayleypy.PermutationGroups.signed_reversals">signed_reversals() (cayleypy.PermutationGroups static method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/cayleypy.Puzzles.html#cayleypy.Puzzles.starminx">starminx() (cayleypy.Puzzles static method)</a>
+</li>
       <li><a href="generated/cayleypy.Puzzles.html#cayleypy.Puzzles.starminx_2">starminx_2() (cayleypy.Puzzles static method)</a>
 </li>
       <li><a href="generated/cayleypy.PermutationGroups.html#cayleypy.PermutationGroups.stars">stars() (cayleypy.PermutationGroups static method)</a>

@@ -1,0 +1,23 @@
+﻿cayleypy.algo.BeamSearchAlgorithm
+=================================
+
+.. currentmodule:: cayleypy.algo
+
+.. autoclass:: BeamSearchAlgorithm
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BeamSearchAlgorithm.__init__
+      ~BeamSearchAlgorithm.search
+   
+   
+
+   
+   
+   
