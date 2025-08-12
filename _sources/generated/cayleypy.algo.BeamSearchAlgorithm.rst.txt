@@ -15,6 +15,8 @@
    
       ~BeamSearchAlgorithm.__init__
       ~BeamSearchAlgorithm.search
+      ~BeamSearchAlgorithm.search_advanced
+      ~BeamSearchAlgorithm.search_simple
    
    
 

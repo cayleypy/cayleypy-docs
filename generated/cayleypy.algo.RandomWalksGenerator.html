@@ -92,7 +92,7 @@
 <h1>cayleypy.algo.RandomWalksGenerator<a class="headerlink" href="#cayleypy-algo-randomwalksgenerator" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.algo.</span></span><span class="sig-name descname"><span class="pre">RandomWalksGenerator</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L14-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.algo.</span></span><span class="sig-name descname"><span class="pre">RandomWalksGenerator</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L14-L235"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator" title="Link to this definition"></a></dt>
 <dd><p>Generator for random walks on Cayley graphs.</p>
 <p>This class encapsulates the logic for generating random walks using different modes:</p>
 <blockquote>
@@ -118,7 +118,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.__init__" title="cayleypy.algo.RandomWalksGenerator.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(graph)</p></td>
 <td><p>Initialize the random walks generator.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.generate" title="cayleypy.algo.RandomWalksGenerator.generate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate</span></code></a>(*[, width, length, mode, start_state])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.generate" title="cayleypy.algo.RandomWalksGenerator.generate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate</span></code></a>(*[, width, length, mode, ...])</p></td>
 <td><p>Generates random walks on the graph.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.random_walks_bfs" title="cayleypy.algo.RandomWalksGenerator.random_walks_bfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random_walks_bfs</span></code></a>(width, length, start_state)</p></td>
@@ -127,11 +127,14 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.random_walks_classic" title="cayleypy.algo.RandomWalksGenerator.random_walks_classic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random_walks_classic</span></code></a>(width, length, start_state)</p></td>
 <td><p>Generate classic random walks.</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.algo.RandomWalksGenerator.random_walks_nbt" title="cayleypy.algo.RandomWalksGenerator.random_walks_nbt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random_walks_nbt</span></code></a>(width, length, start_state)</p></td>
+<td><p>Generate non-backtracking beam search random walks.</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator.generate">
-<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'classic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L30-L72"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.generate" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'classic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbt_history_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L30-L82"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.generate" title="Link to this definition"></a></dt>
 <dd><p>Generates random walks on the graph.</p>
 <p>The following modes of random walk generation are supported:</p>
 <blockquote>
@@ -152,6 +155,12 @@ All states in the output are unique. <code class="docutils literal notranslate">
 distance than in “classic” mode. Size of output is <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">width*length</span></code>.
 If <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">length</span></code> are large enough (<code class="docutils literal notranslate"><span class="pre">width</span></code> at least as large as largest BFS layer, and
 <code class="docutils literal notranslate"><span class="pre">length</span> <span class="pre">&gt;=</span> <span class="pre">diameter</span></code>), this will return all states and true distances to the start state.</p></li>
+<li><p>“nbt” - non-backtracking beam search random walks. This mode generates improved non-backtracking
+random walks that “mix even faster” - the number of random walk steps will be better related to actual
+distance on the graph. The procedure is similar to beam search, except there is no goal function. All
+trajectories know about each other and avoid visiting states visited by any trajectory. Additionally,
+1-neighbors of current states are also banned to improve mixing. The <cite>nbt_history_depth</cite> parameter
+controls how many previous levels to remember and ban.</p></li>
 </ul>
 </div></blockquote>
 <dl class="field-list simple">
@@ -161,6 +170,7 @@ If <code class="docutils literal notranslate"><span class="pre">width</span></co
 <li><p><strong>length</strong> – Length of each random walk.</p></li>
 <li><p><strong>start_state</strong> – State from which to start random walk. Defaults to the central state.</p></li>
 <li><p><strong>mode</strong> – Type of random walk (see above). Defaults to “classic”.</p></li>
+<li><p><strong>nbt_history_depth</strong> – For “nbt” mode, how many previous levels to remember and ban from revisiting.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -172,36 +182,59 @@ to state <code class="docutils literal notranslate"><span class="pre">x[i]</span
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator.random_walks_bfs">
-<span class="sig-name descname"><span class="pre">random_walks_bfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L110-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.random_walks_bfs" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">random_walks_bfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L120-L150"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.random_walks_bfs" title="Link to this definition"></a></dt>
 <dd><p>Generate BFS-based random walks.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>width</strong> – Maximum number of states per layer</p></li>
-<li><p><strong>length</strong> – Maximum number of layers</p></li>
-<li><p><strong>start_state</strong> – Starting state for the BFS</p></li>
+<li><p><strong>width</strong> – Maximum number of states per layer.</p></li>
+<li><p><strong>length</strong> – Maximum number of layers.</p></li>
+<li><p><strong>start_state</strong> – Starting state for the BFS.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Tuple of (states, distances)</p>
+<dd class="field-even"><p>Tuple of (states, distances).</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator.random_walks_classic">
-<span class="sig-name descname"><span class="pre">random_walks_classic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L74-L108"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.random_walks_classic" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">random_walks_classic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L84-L118"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.random_walks_classic" title="Link to this definition"></a></dt>
 <dd><p>Generate classic random walks.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>width</strong> – Number of random walks to generate</p></li>
-<li><p><strong>length</strong> – Length of each random walk</p></li>
-<li><p><strong>start_state</strong> – Starting state for all walks</p></li>
+<li><p><strong>width</strong> – Number of random walks to generate.</p></li>
+<li><p><strong>length</strong> – Length of each random walk.</p></li>
+<li><p><strong>start_state</strong> – Starting state for all walks.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Tuple of (states, distances)</p>
+<dd class="field-even"><p>Tuple of (states, distances).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.algo.RandomWalksGenerator.random_walks_nbt">
+<span class="sig-name descname"><span class="pre">random_walks_nbt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">history_depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/random_walks.py#L152-L235"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.RandomWalksGenerator.random_walks_nbt" title="Link to this definition"></a></dt>
+<dd><p>Generate non-backtracking beam search random walks.</p>
+<p>This method generates improved non-backtracking random walks that “mix even faster” -
+the number of random walk steps will be better related to actual distance on the graph.
+The procedure is similar to beam search, except there is no goal function.
+All trajectories know about each other and avoid visiting states visited by any trajectory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – Number of random walks to generate in parallel.</p></li>
+<li><p><strong>length</strong> – Length of each random walk.</p></li>
+<li><p><strong>start_state</strong> – Starting state for all walks (encoded).</p></li>
+<li><p><strong>history_depth</strong> – How many previous levels to remember and ban from revisiting.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple of (states, distances).</p>
 </dd>
 </dl>
 </dd></dl>

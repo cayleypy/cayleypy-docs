@@ -17,6 +17,7 @@
       ~RandomWalksGenerator.generate
       ~RandomWalksGenerator.random_walks_bfs
       ~RandomWalksGenerator.random_walks_classic
+      ~RandomWalksGenerator.random_walks_nbt
    
    
 
