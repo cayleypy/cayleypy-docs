@@ -26,6 +26,7 @@
       ~CayleyGraph.get_neighbors
       ~CayleyGraph.get_neighbors_decoded
       ~CayleyGraph.get_unique_states
+      ~CayleyGraph.modified_copy
       ~CayleyGraph.random_walks
       ~CayleyGraph.restore_path
       ~CayleyGraph.to_networkx_graph
@@ -40,5 +41,6 @@
    .. autosummary::
    
       ~CayleyGraph.generators
+      ~CayleyGraph.with_inverted_generators
    
    

@@ -1,6 +1,0 @@
-﻿cayleypy.algo.find\_path\_bfs\_mitm
-===================================
-
-.. currentmodule:: cayleypy.algo
-
-.. autofunction:: find_path_bfs_mitm

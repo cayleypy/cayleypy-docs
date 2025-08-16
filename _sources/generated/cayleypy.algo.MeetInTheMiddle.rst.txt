@@ -1,0 +1,25 @@
+﻿cayleypy.algo.MeetInTheMiddle
+=============================
+
+.. currentmodule:: cayleypy.algo
+
+.. autoclass:: MeetInTheMiddle
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MeetInTheMiddle.__init__
+      ~MeetInTheMiddle.find_path_between
+      ~MeetInTheMiddle.find_path_from
+      ~MeetInTheMiddle.find_path_to
+   
+   
+
+   
+   
+   
