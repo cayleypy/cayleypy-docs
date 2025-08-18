@@ -1,0 +1,32 @@
+﻿cayleypy.CayleyPath
+===================
+
+.. currentmodule:: cayleypy
+
+.. autoclass:: CayleyPath
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CayleyPath.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CayleyPath.all_states
+      ~CayleyPath.end_state
+      ~CayleyPath.start_state
+      ~CayleyPath.edges
+      ~CayleyPath.graph
+   
+   

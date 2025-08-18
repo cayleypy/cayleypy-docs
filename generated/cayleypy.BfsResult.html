@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="cayleypy.find_path" href="cayleypy.find_path.html" />
-    <link rel="prev" title="cayleypy.CayleyGraph" href="cayleypy.CayleyGraph.html" /> 
+    <link rel="prev" title="cayleypy.CayleyPath" href="cayleypy.CayleyPath.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,6 +48,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../api.html#core-classes-and-functions">Core classes and functions</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cayleypy.CayleyGraphDef.html">cayleypy.CayleyGraphDef</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cayleypy.CayleyGraph.html">cayleypy.CayleyGraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.CayleyPath.html">cayleypy.CayleyPath</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">cayleypy.BfsResult</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#cayleypy.BfsResult"><code class="docutils literal notranslate"><span class="pre">BfsResult</span></code></a></li>
 </ul>
@@ -91,7 +92,7 @@
 <h1>cayleypy.BfsResult<a class="headerlink" href="#cayleypy-bfsresult" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="cayleypy.BfsResult">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">BfsResult</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L12-L269"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">BfsResult</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L14-L276"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult" title="Link to this definition"></a></dt>
 <dd><p>Result of running breadth-first search on a Schreier coset graph.</p>
 <p>Can be used to obtain the graph explicitly. In this case, vertices are numbered sequentially in the order in which
 they are visited by BFS.</p>
@@ -168,14 +169,14 @@ they are visited by BFS.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.vertex_names" title="cayleypy.BfsResult.vertex_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertex_names</span></code></a></p></td>
 <td><p>Returns names for vertices in the graph.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfs_completed</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.bfs_completed" title="cayleypy.BfsResult.bfs_completed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfs_completed</span></code></a></p></td>
+<td><p>Whether full graph was explored.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">layer_sizes</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.layer_sizes" title="cayleypy.BfsResult.layer_sizes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layer_sizes</span></code></a></p></td>
+<td><p>i-th element is number of states at distance i from start.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">layers</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.BfsResult.layers" title="cayleypy.BfsResult.layers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layers</span></code></a></p></td>
+<td><p>Explicitly stored states for each layer.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">layers_hashes</span></code></p></td>
 <td><p></p></td>
@@ -183,20 +184,20 @@ they are visited by BFS.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_list_hashes</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">graph</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.BfsResult.graph" title="cayleypy.BfsResult.graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">graph</span></code></a></p></td>
+<td><p>Definition of the CayleyGraph on which BFS was run.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.BfsResult.adjacency_matrix">
-<span class="sig-name descname"><span class="pre">adjacency_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L190-L195"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.adjacency_matrix" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">adjacency_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L197-L202"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.adjacency_matrix" title="Link to this definition"></a></dt>
 <dd><p>Returns adjacency matrix as a dense NumPy array.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.BfsResult.adjacency_matrix_sparse">
-<span class="sig-name descname"><span class="pre">adjacency_matrix_sparse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">coo_array</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L197-L203"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.adjacency_matrix_sparse" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">adjacency_matrix_sparse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">coo_array</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L204-L210"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.adjacency_matrix_sparse" title="Link to this definition"></a></dt>
 <dd><p>Returns adjacency matrix as a sparse SciPy array.</p>
 </dd></dl>
 
@@ -206,9 +207,15 @@ they are visited by BFS.</p>
 <dd><p>Explicit states, ordered by index.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.bfs_completed">
+<span class="sig-name descname"><span class="pre">bfs_completed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#cayleypy.BfsResult.bfs_completed" title="Link to this definition"></a></dt>
+<dd><p>Whether full graph was explored.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.BfsResult.diameter">
-<span class="sig-name descname"><span class="pre">diameter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L126-L128"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.diameter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">diameter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L133-L135"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.diameter" title="Link to this definition"></a></dt>
 <dd><p>Maximal distance from any start vertex to any other vertex.</p>
 </dd></dl>
 
@@ -220,14 +227,20 @@ they are visited by BFS.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.BfsResult.get_edge_name">
-<span class="sig-name descname"><span class="pre">get_edge_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L232-L246"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.get_edge_name" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_edge_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L239-L253"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.get_edge_name" title="Link to this definition"></a></dt>
 <dd><p>Returns name for generator used to go from vertex i1 to vertex i2.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.BfsResult.get_layer">
-<span class="sig-name descname"><span class="pre">get_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L130-L136"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.get_layer" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L137-L143"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.get_layer" title="Link to this definition"></a></dt>
 <dd><p>Returns all states in the layer with given index.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.graph">
+<span class="sig-name descname"><span class="pre">graph</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="cayleypy.CayleyGraphDef.html#cayleypy.CayleyGraphDef" title="cayleypy.cayley_graph_def.CayleyGraphDef"><span class="pre">CayleyGraphDef</span></a></em><a class="headerlink" href="#cayleypy.BfsResult.graph" title="Link to this definition"></a></dt>
+<dd><p>Definition of the CayleyGraph on which BFS was run. Needed if we want to restore edge names.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -238,13 +251,25 @@ they are visited by BFS.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.BfsResult.last_layer">
-<span class="sig-name descname"><span class="pre">last_layer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L138-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.last_layer" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">last_layer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L145-L147"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.last_layer" title="Link to this definition"></a></dt>
 <dd><p>Returns last layer, formatted as set of strings.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.layer_sizes">
+<span class="sig-name descname"><span class="pre">layer_sizes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cayleypy.BfsResult.layer_sizes" title="Link to this definition"></a></dt>
+<dd><p>i-th element is number of states at distance i from start.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.BfsResult.layers">
+<span class="sig-name descname"><span class="pre">layers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#cayleypy.BfsResult.layers" title="Link to this definition"></a></dt>
+<dd><p>Explicitly stored states for each layer.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.BfsResult.named_undirected_edges">
-<span class="sig-name descname"><span class="pre">named_undirected_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L185-L188"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.named_undirected_edges" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">named_undirected_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L192-L195"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.named_undirected_edges" title="Link to this definition"></a></dt>
 <dd><p>Names for vertices (representing coset elements in readable format).</p>
 </dd></dl>
 
@@ -256,7 +281,7 @@ they are visited by BFS.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="cayleypy.BfsResult.to_networkx_graph">
-<span class="sig-name descname"><span class="pre">to_networkx_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L248-L263"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.to_networkx_graph" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">to_networkx_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/bfs_result.py#L255-L270"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.BfsResult.to_networkx_graph" title="Link to this definition"></a></dt>
 <dd><p>Returns explicit graph as networkx.Graph or networkx.DiGraph.</p>
 </dd></dl>
 
@@ -274,7 +299,7 @@ they are visited by BFS.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="cayleypy.CayleyGraph.html" class="btn btn-neutral float-left" title="cayleypy.CayleyGraph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cayleypy.CayleyPath.html" class="btn btn-neutral float-left" title="cayleypy.CayleyPath" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="cayleypy.find_path.html" class="btn btn-neutral float-right" title="cayleypy.find_path" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

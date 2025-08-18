@@ -1,0 +1,24 @@
+﻿cayleypy.algo.InteractiveBfs
+============================
+
+.. currentmodule:: cayleypy.algo
+
+.. autoclass:: InteractiveBfs
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~InteractiveBfs.__init__
+      ~InteractiveBfs.find_on_last_layer
+      ~InteractiveBfs.step
+   
+   
+
+   
+   
+   
