@@ -23,6 +23,7 @@
       ~PermutationGroups.derangements
       ~PermutationGroups.full_reversals
       ~PermutationGroups.involutive_derangements
+      ~PermutationGroups.larx
       ~PermutationGroups.lrx
       ~PermutationGroups.lx
       ~PermutationGroups.pancake
