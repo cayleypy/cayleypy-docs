@@ -17,11 +17,13 @@
       ~PermutationGroups.all_cycles
       ~PermutationGroups.all_transpositions
       ~PermutationGroups.burnt_pancake
+      ~PermutationGroups.consecutive_k_cycles
       ~PermutationGroups.coxeter
       ~PermutationGroups.cubic_pancake
       ~PermutationGroups.cyclic_coxeter
       ~PermutationGroups.derangements
       ~PermutationGroups.full_reversals
+      ~PermutationGroups.increasing_k_cycles
       ~PermutationGroups.involutive_derangements
       ~PermutationGroups.larx
       ~PermutationGroups.lrx
