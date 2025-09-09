@@ -24,6 +24,7 @@
       ~PermutationGroups.cyclic_coxeter
       ~PermutationGroups.derangements
       ~PermutationGroups.full_reversals
+      ~PermutationGroups.generalized_stars
       ~PermutationGroups.increasing_k_cycles
       ~PermutationGroups.involutive_derangements
       ~PermutationGroups.larx
