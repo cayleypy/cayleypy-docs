@@ -36,6 +36,7 @@
       ~PermutationGroups.signed_reversals
       ~PermutationGroups.stars
       ~PermutationGroups.three_cycles
+      ~PermutationGroups.three_cycles_01i
       ~PermutationGroups.three_cycles_0ij
       ~PermutationGroups.top_spin
       ~PermutationGroups.transposons
