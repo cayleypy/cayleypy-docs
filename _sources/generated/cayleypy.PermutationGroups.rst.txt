@@ -35,6 +35,7 @@
       ~PermutationGroups.rand_generators
       ~PermutationGroups.rapaport_m1
       ~PermutationGroups.rapaport_m2
+      ~PermutationGroups.sheveleva2
       ~PermutationGroups.signed_reversals
       ~PermutationGroups.stars
       ~PermutationGroups.three_cycles
