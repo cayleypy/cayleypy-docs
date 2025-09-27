@@ -29,6 +29,7 @@
       ~PermutationGroups.generalized_stars
       ~PermutationGroups.increasing_k_cycles
       ~PermutationGroups.involutive_derangements
+      ~PermutationGroups.koltsov3
       ~PermutationGroups.larx
       ~PermutationGroups.lrx
       ~PermutationGroups.lx
