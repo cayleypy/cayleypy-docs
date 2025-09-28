@@ -34,6 +34,7 @@
       ~PermutationGroups.lrx
       ~PermutationGroups.lx
       ~PermutationGroups.pancake
+      ~PermutationGroups.prefix_cycles
       ~PermutationGroups.rand_generators
       ~PermutationGroups.rapaport_m1
       ~PermutationGroups.rapaport_m2
