@@ -32,6 +32,7 @@
       ~PermutationGroups.koltsov3
       ~PermutationGroups.larx
       ~PermutationGroups.lrx
+      ~PermutationGroups.lsl_cycles
       ~PermutationGroups.lx
       ~PermutationGroups.pancake
       ~PermutationGroups.prefix_cycles
