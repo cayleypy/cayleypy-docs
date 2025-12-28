@@ -18,6 +18,7 @@
       ~Puzzles.hungarian_rings
       ~Puzzles.megaminx
       ~Puzzles.mini_pyramorphix
+      ~Puzzles.picture_cube333
       ~Puzzles.pyraminx
       ~Puzzles.rubik_cube
       ~Puzzles.starminx
