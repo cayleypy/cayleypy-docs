@@ -8,15 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>cayleypy.CayleyGraph &mdash; CayleyPy  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -92,7 +92,7 @@
 <h1>cayleypy.CayleyGraph<a class="headerlink" href="#cayleypy-cayleygraph" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraph">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">CayleyGraph</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph.py#L18-L468"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraph" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cayleypy.</span></span><span class="sig-name descname"><span class="pre">CayleyGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.CayleyGraphDef.html#cayleypy.CayleyGraphDef" title="cayleypy.cayley_graph_def.CayleyGraphDef"><span class="pre">CayleyGraphDef</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_encoding_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1048576</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash_chunk_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">33554432</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">memory_limit_gb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_hasher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">StateHasher</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">unused_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/cayley_graph.py#L18-L468"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.CayleyGraph" title="Link to this definition"></a></dt>
 <dd><p>Represents a Schreier coset graph for some group.</p>
 <dl class="simple">
 <dt>In this graph:</dt><dd><ul class="simple">
@@ -336,7 +336,7 @@ passed to the function will be the last returned layer in the result. This funct
 
 <dl class="py property">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraph.generators">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generators</span></span><a class="headerlink" href="#cayleypy.CayleyGraph.generators" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">generators</span></span><a class="headerlink" href="#cayleypy.CayleyGraph.generators" title="Link to this definition"></a></dt>
 <dd><p>Generators of this Cayley graph.</p>
 </dd></dl>
 
@@ -391,7 +391,7 @@ Length of returned path is equal to number of layers.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="cayleypy.CayleyGraph.with_inverted_generators">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">with_inverted_generators</span></span><a class="headerlink" href="#cayleypy.CayleyGraph.with_inverted_generators" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">with_inverted_generators</span></span><a class="headerlink" href="#cayleypy.CayleyGraph.with_inverted_generators" title="Link to this definition"></a></dt>
 <dd><p>Returns copy of this graph with inverted generators.</p>
 </dd></dl>
 

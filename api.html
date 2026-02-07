@@ -8,15 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CayleyPy API Reference &mdash; CayleyPy  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
-      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -113,16 +113,16 @@
 </div>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.CayleyGraphDef.html#cayleypy.CayleyGraphDef" title="cayleypy.CayleyGraphDef"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.CayleyGraphDef</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.CayleyGraphDef.html#cayleypy.CayleyGraphDef" title="cayleypy.CayleyGraphDef"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.CayleyGraphDef</span></code></a>(generators_type, ...)</p></td>
 <td><p>Mathematical definition of a CayleyGraph.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph" title="cayleypy.CayleyGraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.CayleyGraph</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.CayleyGraph.html#cayleypy.CayleyGraph" title="cayleypy.CayleyGraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.CayleyGraph</span></code></a>(definition, *[, ...])</p></td>
 <td><p>Represents a Schreier coset graph for some group.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.CayleyPath.html#cayleypy.CayleyPath" title="cayleypy.CayleyPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.CayleyPath</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.CayleyPath.html#cayleypy.CayleyPath" title="cayleypy.CayleyPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.CayleyPath</span></code></a>(start_state, edges, graph)</p></td>
 <td><p>Path in a Cayley graph.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.BfsResult.html#cayleypy.BfsResult" title="cayleypy.BfsResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.BfsResult</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.BfsResult.html#cayleypy.BfsResult" title="cayleypy.BfsResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.BfsResult</span></code></a>(bfs_completed, ...)</p></td>
 <td><p>Result of running breadth-first search on a Schreier coset graph.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.find_path.html#cayleypy.find_path" title="cayleypy.find_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.find_path</span></code></a>(graph, start_state, **kwargs)</p></td>
@@ -135,16 +135,16 @@
 <h2>Graphs library<a class="headerlink" href="#graphs-library" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.PermutationGroups.html#cayleypy.PermutationGroups" title="cayleypy.PermutationGroups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.PermutationGroups</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.PermutationGroups.html#cayleypy.PermutationGroups" title="cayleypy.PermutationGroups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.PermutationGroups</span></code></a>()</p></td>
 <td><p>Pre-defined Cayley graphs for permutation groups (S_n).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.MatrixGroups.html#cayleypy.MatrixGroups" title="cayleypy.MatrixGroups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.MatrixGroups</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.MatrixGroups.html#cayleypy.MatrixGroups" title="cayleypy.MatrixGroups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.MatrixGroups</span></code></a>()</p></td>
 <td><p>Pre-defined Cayley graphs for matrix groups.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.Puzzles.html#cayleypy.Puzzles" title="cayleypy.Puzzles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.Puzzles</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.Puzzles.html#cayleypy.Puzzles" title="cayleypy.Puzzles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.Puzzles</span></code></a>()</p></td>
 <td><p>Definitions of graphs describing various puzzles.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.GapPuzzles.html#cayleypy.GapPuzzles" title="cayleypy.GapPuzzles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.GapPuzzles</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.GapPuzzles.html#cayleypy.GapPuzzles" title="cayleypy.GapPuzzles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.GapPuzzles</span></code></a>()</p></td>
 <td><p>Library of puzzles defined in GAP format.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.create_graph.html#cayleypy.create_graph" title="cayleypy.create_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.create_graph</span></code></a>(*[, ...])</p></td>
@@ -160,19 +160,19 @@
 <h2>Beam search and ML<a class="headerlink" href="#beam-search-and-ml" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.Predictor.html#cayleypy.Predictor" title="cayleypy.Predictor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.Predictor</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.Predictor.html#cayleypy.Predictor" title="cayleypy.Predictor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.Predictor</span></code></a>(graph, models_or_heuristics)</p></td>
 <td><p>Estimates distance from central state to given states.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.algo.BeamSearchAlgorithm.html#cayleypy.algo.BeamSearchAlgorithm" title="cayleypy.algo.BeamSearchAlgorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.BeamSearchAlgorithm</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.algo.BeamSearchAlgorithm.html#cayleypy.algo.BeamSearchAlgorithm" title="cayleypy.algo.BeamSearchAlgorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.BeamSearchAlgorithm</span></code></a>(graph)</p></td>
 <td><p>Beam search algorithm for finding paths in Cayley graphs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.algo.BeamSearchResult.html#cayleypy.algo.BeamSearchResult" title="cayleypy.algo.BeamSearchResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.BeamSearchResult</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.algo.BeamSearchResult.html#cayleypy.algo.BeamSearchResult" title="cayleypy.algo.BeamSearchResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.BeamSearchResult</span></code></a>(path_found, ...)</p></td>
 <td><p>Result of running beam search on a Cayley graph.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.algo.RandomWalksGenerator.html#cayleypy.algo.RandomWalksGenerator" title="cayleypy.algo.RandomWalksGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.RandomWalksGenerator</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.algo.RandomWalksGenerator.html#cayleypy.algo.RandomWalksGenerator" title="cayleypy.algo.RandomWalksGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.RandomWalksGenerator</span></code></a>(graph)</p></td>
 <td><p>Generator for random walks on Cayley graphs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.models.ModelConfig.html#cayleypy.models.ModelConfig" title="cayleypy.models.ModelConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.ModelConfig</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.models.ModelConfig.html#cayleypy.models.ModelConfig" title="cayleypy.models.ModelConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.ModelConfig</span></code></a>(model_type, ...)</p></td>
 <td><p>Configuration used to describe ML model.</p></td>
 </tr>
 </tbody>
@@ -188,10 +188,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.algo.bfs_numpy.html#cayleypy.algo.bfs_numpy" title="cayleypy.algo.bfs_numpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.bfs_numpy</span></code></a>(graph[, max_diameter])</p></td>
 <td><p>Simple version of BFS (from destination_state) using numpy, optimized for memory usage.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.algo.InteractiveBfs.html#cayleypy.algo.InteractiveBfs" title="cayleypy.algo.InteractiveBfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.InteractiveBfs</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.algo.InteractiveBfs.html#cayleypy.algo.InteractiveBfs" title="cayleypy.algo.InteractiveBfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.InteractiveBfs</span></code></a>(graph, start_states)</p></td>
 <td><p>Interactive breadth-first search that computes layers one by one.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.algo.MeetInTheMiddle.html#cayleypy.algo.MeetInTheMiddle" title="cayleypy.algo.MeetInTheMiddle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.MeetInTheMiddle</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.algo.MeetInTheMiddle.html#cayleypy.algo.MeetInTheMiddle" title="cayleypy.algo.MeetInTheMiddle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.MeetInTheMiddle</span></code></a>()</p></td>
 <td><p>Meet-in-the middle (MITM) algorithm for path finding.</p></td>
 </tr>
 </tbody>
