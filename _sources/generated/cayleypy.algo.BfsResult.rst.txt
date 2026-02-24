@@ -1,7 +1,7 @@
-﻿cayleypy.BfsResult
-==================
+﻿cayleypy.algo.BfsResult
+=======================
 
-.. currentmodule:: cayleypy
+.. currentmodule:: cayleypy.algo
 
 .. autoclass:: BfsResult
 

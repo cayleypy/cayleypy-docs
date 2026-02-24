@@ -49,7 +49,6 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.CayleyGraphDef.html">cayleypy.CayleyGraphDef</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.CayleyGraph.html">cayleypy.CayleyGraph</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.CayleyPath.html">cayleypy.CayleyPath</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.BfsResult.html">cayleypy.BfsResult</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.find_path.html">cayleypy.find_path</a></li>
 </ul>
 </li>
@@ -70,7 +69,9 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.models.ModelConfig.html">cayleypy.models.ModelConfig</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#special-algorithms">Special algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bfs-algorithm-and-its-variations">BFS algorithm and its variations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.BfsAlgorithm.html">cayleypy.algo.BfsAlgorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.BfsResult.html">cayleypy.algo.BfsResult</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.bfs_bitmask.html">cayleypy.algo.bfs_bitmask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.bfs_numpy.html">cayleypy.algo.bfs_numpy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.InteractiveBfs.html">cayleypy.algo.InteractiveBfs</a></li>
@@ -122,10 +123,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.CayleyPath.html#cayleypy.CayleyPath" title="cayleypy.CayleyPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.CayleyPath</span></code></a>(start_state, edges, graph)</p></td>
 <td><p>Path in a Cayley graph.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.BfsResult.html#cayleypy.BfsResult" title="cayleypy.BfsResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.BfsResult</span></code></a>(bfs_completed, ...)</p></td>
-<td><p>Result of running breadth-first search on a Schreier coset graph.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.find_path.html#cayleypy.find_path" title="cayleypy.find_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.find_path</span></code></a>(graph, start_state, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.find_path.html#cayleypy.find_path" title="cayleypy.find_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.find_path</span></code></a>(graph, start_state, **kwargs)</p></td>
 <td><p>Finds path from <code class="docutils literal notranslate"><span class="pre">start_state</span></code> to central state.</p></td>
 </tr>
 </tbody>
@@ -178,10 +176,16 @@
 </tbody>
 </table>
 </section>
-<section id="special-algorithms">
-<h2>Special algorithms<a class="headerlink" href="#special-algorithms" title="Link to this heading"></a></h2>
+<section id="bfs-algorithm-and-its-variations">
+<h2>BFS algorithm and its variations<a class="headerlink" href="#bfs-algorithm-and-its-variations" title="Link to this heading"></a></h2>
 <table class="autosummary longtable docutils align-default">
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.algo.BfsAlgorithm.html#cayleypy.algo.BfsAlgorithm" title="cayleypy.algo.BfsAlgorithm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.BfsAlgorithm</span></code></a>()</p></td>
+<td><p>Basic version of the bread-first search (BFS) algorithm.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.algo.BfsResult.html#cayleypy.algo.BfsResult" title="cayleypy.algo.BfsResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.BfsResult</span></code></a>(bfs_completed, ...)</p></td>
+<td><p>Result of running breadth-first search on a Schreier coset graph.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.algo.bfs_bitmask.html#cayleypy.algo.bfs_bitmask" title="cayleypy.algo.bfs_bitmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.algo.bfs_bitmask</span></code></a>(graph[, max_diameter])</p></td>
 <td><p>Version of BFS storing all vertices explicitly as bitmasks, using 3 bits of memory per state.</p></td>
 </tr>

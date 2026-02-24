@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cayleypy.algo.BfsAlgorithm &mdash; CayleyPy  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cayleypy.algo.BfsResult" href="cayleypy.algo.BfsResult.html" />
+    <link rel="prev" title="cayleypy.models.ModelConfig" href="cayleypy.models.ModelConfig.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CayleyPy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">CayleyPy API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api.html#core-classes-and-functions">Core classes and functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#graphs-library">Graphs library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#beam-search-and-ml">Beam search and ML</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#bfs-algorithm-and-its-variations">BFS algorithm and its variations</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">cayleypy.algo.BfsAlgorithm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cayleypy.algo.BfsAlgorithm"><code class="docutils literal notranslate"><span class="pre">BfsAlgorithm</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.BfsResult.html">cayleypy.algo.BfsResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.bfs_bitmask.html">cayleypy.algo.bfs_bitmask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.bfs_numpy.html">cayleypy.algo.bfs_numpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.InteractiveBfs.html">cayleypy.algo.InteractiveBfs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.MeetInTheMiddle.html">cayleypy.algo.MeetInTheMiddle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CayleyPy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">CayleyPy API Reference</a></li>
+      <li class="breadcrumb-item active">cayleypy.algo.BfsAlgorithm</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/cayleypy.algo.BfsAlgorithm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cayleypy-algo-bfsalgorithm">
+<h1>cayleypy.algo.BfsAlgorithm<a class="headerlink" href="#cayleypy-algo-bfsalgorithm" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="cayleypy.algo.BfsAlgorithm">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cayleypy.algo.</span></span><span class="sig-name descname"><span class="pre">BfsAlgorithm</span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/bfs_algo.py#L14-L174"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.BfsAlgorithm" title="Link to this definition"></a></dt>
+<dd><p>Basic version of the bread-first search (BFS) algorithm.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.algo.BfsAlgorithm.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cayleypy.algo.BfsAlgorithm.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.algo.BfsAlgorithm.__init__" title="cayleypy.algo.BfsAlgorithm.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.algo.BfsAlgorithm.bfs" title="cayleypy.algo.BfsAlgorithm.bfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfs</span></code></a>(graph, *[, start_states, ...])</p></td>
+<td><p>Runs bread-first search (BFS) algorithm from given <cite>start_states</cite>.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.algo.BfsAlgorithm.bfs">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">bfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.CayleyGraph.html#cayleypy.CayleyGraph" title="cayleypy.CayleyGraph"><span class="pre">CayleyGraph</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_states</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_layer_size_to_store</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_layer_size_to_explore</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000000000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_diameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_all_edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_all_hashes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_condition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_batching</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="cayleypy.algo.BfsResult.html#cayleypy.algo.BfsResult" title="cayleypy.algo.bfs_result.BfsResult"><span class="pre">BfsResult</span></a></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/algo/bfs_algo.py#L17-L174"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.algo.BfsAlgorithm.bfs" title="Link to this definition"></a></dt>
+<dd><p>Runs bread-first search (BFS) algorithm from given <cite>start_states</cite>.</p>
+<p>BFS visits all vertices of the graph in layers, where next layer contains vertices adjacent to previous layer
+that were not visited before. As a result, we get all vertices grouped by their distance from the set of initial
+states.</p>
+<dl class="simple">
+<dt>Depending on parameters below, it can be used to:</dt><dd><ul class="simple">
+<li><p>Get growth function (number of vertices at each BFS layer).</p></li>
+<li><p>Get vertices at some first and last layers.</p></li>
+<li><p>Get all vertices.</p></li>
+<li><p>Get all vertices and edges (i.e. get the whole graph explicitly).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>graph</strong> – CayleyGraph object on which to run BFS.</p></li>
+<li><p><strong>start_states</strong> – states on 0-th layer of BFS. Defaults to destination state of the graph.</p></li>
+<li><p><strong>max_layer_size_to_store</strong> – maximal size of layer to store.
+If None, all layers will be stored (use this if you need full graph).
+Defaults to 1000.
+First and last layers are always stored.</p></li>
+<li><p><strong>max_layer_size_to_explore</strong> – if reaches layer of larger size, will stop the BFS.</p></li>
+<li><p><strong>max_diameter</strong> – maximal number of BFS iterations.</p></li>
+<li><p><strong>return_all_edges</strong> – whether to return list of all edges (uses more memory).</p></li>
+<li><p><strong>return_all_hashes</strong> – whether to return hashes for all vertices (uses more memory).</p></li>
+<li><p><strong>stop_condition</strong> – function to be called after each iteration. It takes 2 tensors: latest computed layer and
+its hashes, and returns whether BFS must immediately terminate. If it returns True, the layer that was
+passed to the function will be the last returned layer in the result. This function can also be used as a
+“hook” to do some computations after BFS iteration (in which case it must always return False).</p></li>
+<li><p><strong>disable_batching</strong> – Disable batching. Use if you need states and hashes to be in the same order.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>BfsResult object with requested BFS results.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cayleypy.models.ModelConfig.html" class="btn btn-neutral float-left" title="cayleypy.models.ModelConfig" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cayleypy.algo.BfsResult.html" class="btn btn-neutral float-right" title="cayleypy.algo.BfsResult" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, CayleyPy Foundation.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

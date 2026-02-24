@@ -1,0 +1,23 @@
+﻿cayleypy.algo.BfsAlgorithm
+==========================
+
+.. currentmodule:: cayleypy.algo
+
+.. autoclass:: BfsAlgorithm
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BfsAlgorithm.__init__
+      ~BfsAlgorithm.bfs
+   
+   
+
+   
+   
+   
