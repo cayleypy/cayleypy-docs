@@ -1,0 +1,23 @@
+﻿cayleypy.algo.BfsDistributed
+============================
+
+.. currentmodule:: cayleypy.algo
+
+.. autoclass:: BfsDistributed
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BfsDistributed.__init__
+      ~BfsDistributed.bfs
+   
+   
+
+   
+   
+   

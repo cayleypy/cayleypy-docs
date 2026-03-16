@@ -40,7 +40,10 @@
 
    .. autosummary::
    
+      ~CayleyGraph.device
       ~CayleyGraph.generators
+      ~CayleyGraph.gpu_devices
+      ~CayleyGraph.num_gpus
       ~CayleyGraph.with_inverted_generators
    
    
