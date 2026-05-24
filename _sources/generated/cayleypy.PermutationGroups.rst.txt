@@ -21,6 +21,8 @@
       ~PermutationGroups.conjugacy_classes
       ~PermutationGroups.consecutive_k_cycles
       ~PermutationGroups.coxeter
+      ~PermutationGroups.coxeter_b
+      ~PermutationGroups.coxeter_d
       ~PermutationGroups.cubic_pancake
       ~PermutationGroups.cyclic_coxeter
       ~PermutationGroups.derangements
