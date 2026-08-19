@@ -1,0 +1,23 @@
+﻿cayleypy.train.PinballLoss
+==========================
+
+.. currentmodule:: cayleypy.train
+
+.. autoclass:: PinballLoss
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PinballLoss.__init__
+      ~PinballLoss.elementwise
+   
+   
+
+   
+   
+   

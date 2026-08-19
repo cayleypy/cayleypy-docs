@@ -1,0 +1,6 @@
+﻿cayleypy.train.make\_loss
+=========================
+
+.. currentmodule:: cayleypy.train
+
+.. autofunction:: make_loss

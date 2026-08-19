@@ -1,0 +1,23 @@
+﻿cayleypy.train.Loss
+===================
+
+.. currentmodule:: cayleypy.train
+
+.. autoclass:: Loss
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Loss.__init__
+      ~Loss.elementwise
+   
+   
+
+   
+   
+   

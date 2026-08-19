@@ -69,6 +69,13 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.models.ModelConfig.html">cayleypy.models.ModelConfig</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#training">Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.train.Loss.html">cayleypy.train.Loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.train.MseLoss.html">cayleypy.train.MseLoss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.train.PinballLoss.html">cayleypy.train.PinballLoss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.train.make_loss.html">cayleypy.train.make_loss</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#bfs-algorithm-and-its-variations">BFS algorithm and its variations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.BfsAlgorithm.html">cayleypy.algo.BfsAlgorithm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.BfsDistributed.html">cayleypy.algo.BfsDistributed</a></li>
@@ -173,6 +180,25 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.models.ModelConfig.html#cayleypy.models.ModelConfig" title="cayleypy.models.ModelConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.ModelConfig</span></code></a>(model_type, ...)</p></td>
 <td><p>Configuration used to describe ML model.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="training">
+<h2>Training<a class="headerlink" href="#training" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.train.Loss.html#cayleypy.train.Loss" title="cayleypy.train.Loss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.train.Loss</span></code></a>()</p></td>
+<td><p>Base class for losses used to train distance-estimating models.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.train.MseLoss.html#cayleypy.train.MseLoss" title="cayleypy.train.MseLoss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.train.MseLoss</span></code></a>()</p></td>
+<td><p>Mean squared error loss.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.train.PinballLoss.html#cayleypy.train.PinballLoss" title="cayleypy.train.PinballLoss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.train.PinballLoss</span></code></a>([tau])</p></td>
+<td><p>Pinball (quantile) loss, which penalizes underestimation and overestimation differently.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.train.make_loss.html#cayleypy.train.make_loss" title="cayleypy.train.make_loss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.train.make_loss</span></code></a>(name[, tau])</p></td>
+<td><p>Creates loss by name.</p></td>
 </tr>
 </tbody>
 </table>
