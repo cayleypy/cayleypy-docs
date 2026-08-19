@@ -1,0 +1,6 @@
+﻿cayleypy.models.load\_checkpoint
+================================
+
+.. currentmodule:: cayleypy.models
+
+.. autofunction:: load_checkpoint

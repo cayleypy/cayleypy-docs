@@ -14,7 +14,9 @@
    .. autosummary::
    
       ~Predictor.__init__
+      ~Predictor.predict_batched
       ~Predictor.pretrained
+      ~Predictor.score_children
    
    
 

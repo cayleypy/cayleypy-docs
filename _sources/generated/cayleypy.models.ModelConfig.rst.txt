@@ -14,8 +14,10 @@
    .. autosummary::
    
       ~ModelConfig.__init__
+      ~ModelConfig.build_model
       ~ModelConfig.from_dict
       ~ModelConfig.load
+      ~ModelConfig.to_dict
    
    
 
@@ -25,6 +27,9 @@
 
    .. autosummary::
    
+      ~ModelConfig.graph_hash
+      ~ModelConfig.n_outputs
+      ~ModelConfig.tokenizer_groups
       ~ModelConfig.weights_kaggle_id
       ~ModelConfig.weights_path
       ~ModelConfig.model_type

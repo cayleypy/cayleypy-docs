@@ -1,0 +1,6 @@
+﻿cayleypy.models.save\_checkpoint
+================================
+
+.. currentmodule:: cayleypy.models
+
+.. autofunction:: save_checkpoint
