@@ -1,0 +1,81 @@
+﻿cayleypy.models.MlpModel
+========================
+
+.. currentmodule:: cayleypy.models
+
+.. autoclass:: MlpModel
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MlpModel.__init__
+      ~MlpModel.add_module
+      ~MlpModel.apply
+      ~MlpModel.bfloat16
+      ~MlpModel.buffers
+      ~MlpModel.children
+      ~MlpModel.compile
+      ~MlpModel.cpu
+      ~MlpModel.cuda
+      ~MlpModel.double
+      ~MlpModel.eval
+      ~MlpModel.extra_repr
+      ~MlpModel.float
+      ~MlpModel.forward
+      ~MlpModel.get_buffer
+      ~MlpModel.get_extra_state
+      ~MlpModel.get_parameter
+      ~MlpModel.get_submodule
+      ~MlpModel.half
+      ~MlpModel.ipu
+      ~MlpModel.load_state_dict
+      ~MlpModel.modules
+      ~MlpModel.mtia
+      ~MlpModel.named_buffers
+      ~MlpModel.named_children
+      ~MlpModel.named_modules
+      ~MlpModel.named_parameters
+      ~MlpModel.parameters
+      ~MlpModel.register_backward_hook
+      ~MlpModel.register_buffer
+      ~MlpModel.register_forward_hook
+      ~MlpModel.register_forward_pre_hook
+      ~MlpModel.register_full_backward_hook
+      ~MlpModel.register_full_backward_pre_hook
+      ~MlpModel.register_load_state_dict_post_hook
+      ~MlpModel.register_load_state_dict_pre_hook
+      ~MlpModel.register_module
+      ~MlpModel.register_parameter
+      ~MlpModel.register_state_dict_post_hook
+      ~MlpModel.register_state_dict_pre_hook
+      ~MlpModel.requires_grad_
+      ~MlpModel.set_extra_state
+      ~MlpModel.set_submodule
+      ~MlpModel.share_memory
+      ~MlpModel.state_dict
+      ~MlpModel.to
+      ~MlpModel.to_empty
+      ~MlpModel.train
+      ~MlpModel.type
+      ~MlpModel.xpu
+      ~MlpModel.zero_grad
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MlpModel.T_destination
+      ~MlpModel.call_super_init
+      ~MlpModel.dump_patches
+      ~MlpModel.training
+   
+   

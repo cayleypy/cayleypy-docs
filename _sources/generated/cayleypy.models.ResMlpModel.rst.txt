@@ -1,0 +1,81 @@
+﻿cayleypy.models.ResMlpModel
+===========================
+
+.. currentmodule:: cayleypy.models
+
+.. autoclass:: ResMlpModel
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ResMlpModel.__init__
+      ~ResMlpModel.add_module
+      ~ResMlpModel.apply
+      ~ResMlpModel.bfloat16
+      ~ResMlpModel.buffers
+      ~ResMlpModel.children
+      ~ResMlpModel.compile
+      ~ResMlpModel.cpu
+      ~ResMlpModel.cuda
+      ~ResMlpModel.double
+      ~ResMlpModel.eval
+      ~ResMlpModel.extra_repr
+      ~ResMlpModel.float
+      ~ResMlpModel.forward
+      ~ResMlpModel.get_buffer
+      ~ResMlpModel.get_extra_state
+      ~ResMlpModel.get_parameter
+      ~ResMlpModel.get_submodule
+      ~ResMlpModel.half
+      ~ResMlpModel.ipu
+      ~ResMlpModel.load_state_dict
+      ~ResMlpModel.modules
+      ~ResMlpModel.mtia
+      ~ResMlpModel.named_buffers
+      ~ResMlpModel.named_children
+      ~ResMlpModel.named_modules
+      ~ResMlpModel.named_parameters
+      ~ResMlpModel.parameters
+      ~ResMlpModel.register_backward_hook
+      ~ResMlpModel.register_buffer
+      ~ResMlpModel.register_forward_hook
+      ~ResMlpModel.register_forward_pre_hook
+      ~ResMlpModel.register_full_backward_hook
+      ~ResMlpModel.register_full_backward_pre_hook
+      ~ResMlpModel.register_load_state_dict_post_hook
+      ~ResMlpModel.register_load_state_dict_pre_hook
+      ~ResMlpModel.register_module
+      ~ResMlpModel.register_parameter
+      ~ResMlpModel.register_state_dict_post_hook
+      ~ResMlpModel.register_state_dict_pre_hook
+      ~ResMlpModel.requires_grad_
+      ~ResMlpModel.set_extra_state
+      ~ResMlpModel.set_submodule
+      ~ResMlpModel.share_memory
+      ~ResMlpModel.state_dict
+      ~ResMlpModel.to
+      ~ResMlpModel.to_empty
+      ~ResMlpModel.train
+      ~ResMlpModel.type
+      ~ResMlpModel.xpu
+      ~ResMlpModel.zero_grad
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ResMlpModel.T_destination
+      ~ResMlpModel.call_super_init
+      ~ResMlpModel.dump_patches
+      ~ResMlpModel.training
+   
+   
