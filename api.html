@@ -67,6 +67,7 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.BeamSearchResult.html">cayleypy.algo.BeamSearchResult</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.algo.RandomWalksGenerator.html">cayleypy.algo.RandomWalksGenerator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.models.ModelConfig.html">cayleypy.models.ModelConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.models.GroupTokenizer.html">cayleypy.models.GroupTokenizer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.models.MlpModel.html">cayleypy.models.MlpModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.models.ResMlpModel.html">cayleypy.models.ResMlpModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/cayleypy.models.graph_hash.html">cayleypy.models.graph_hash</a></li>
@@ -186,19 +187,22 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.models.ModelConfig.html#cayleypy.models.ModelConfig" title="cayleypy.models.ModelConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.ModelConfig</span></code></a>(model_type, ...)</p></td>
 <td><p>Configuration used to describe ML model.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.models.MlpModel.html#cayleypy.models.MlpModel" title="cayleypy.models.MlpModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.MlpModel</span></code></a>(config)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.models.GroupTokenizer.html#cayleypy.models.GroupTokenizer" title="cayleypy.models.GroupTokenizer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.GroupTokenizer</span></code></a>(groups)</p></td>
+<td><p>Converts states to sequences of tokens, one token per group of consecutive elements of a state.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.models.MlpModel.html#cayleypy.models.MlpModel" title="cayleypy.models.MlpModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.MlpModel</span></code></a>(config)</p></td>
 <td><p>Multi-layer perceptron model.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.models.ResMlpModel.html#cayleypy.models.ResMlpModel" title="cayleypy.models.ResMlpModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.ResMlpModel</span></code></a>(config)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.models.ResMlpModel.html#cayleypy.models.ResMlpModel" title="cayleypy.models.ResMlpModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.ResMlpModel</span></code></a>(config)</p></td>
 <td><p>Multi-layer perceptron with residual (skip) connections.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.models.graph_hash.html#cayleypy.models.graph_hash" title="cayleypy.models.graph_hash"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.graph_hash</span></code></a>(graph_def)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.models.graph_hash.html#cayleypy.models.graph_hash" title="cayleypy.models.graph_hash"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.graph_hash</span></code></a>(graph_def)</p></td>
 <td><p>Computes hash of the mathematical definition of a graph.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.models.save_checkpoint.html#cayleypy.models.save_checkpoint" title="cayleypy.models.save_checkpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.save_checkpoint</span></code></a>(path, model, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.models.save_checkpoint.html#cayleypy.models.save_checkpoint" title="cayleypy.models.save_checkpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.save_checkpoint</span></code></a>(path, model, ...)</p></td>
 <td><p>Saves weights of a model together with the config describing this model.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/cayleypy.models.load_checkpoint.html#cayleypy.models.load_checkpoint" title="cayleypy.models.load_checkpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.load_checkpoint</span></code></a>(path[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/cayleypy.models.load_checkpoint.html#cayleypy.models.load_checkpoint" title="cayleypy.models.load_checkpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cayleypy.models.load_checkpoint</span></code></a>(path[, ...])</p></td>
 <td><p>Loads model from a checkpoint written by <code class="xref py py-func docutils literal notranslate"><span class="pre">save_checkpoint()</span></code>.</p></td>
 </tr>
 </tbody>

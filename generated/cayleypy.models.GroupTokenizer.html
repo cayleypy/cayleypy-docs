@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cayleypy.models.GroupTokenizer &mdash; CayleyPy  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cayleypy.models.MlpModel" href="cayleypy.models.MlpModel.html" />
+    <link rel="prev" title="cayleypy.models.ModelConfig" href="cayleypy.models.ModelConfig.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CayleyPy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">CayleyPy API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api.html#core-classes-and-functions">Core classes and functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#graphs-library">Graphs library</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#beam-search-and-ml">Beam search and ML</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.Predictor.html">cayleypy.Predictor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.BeamSearchAlgorithm.html">cayleypy.algo.BeamSearchAlgorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.BeamSearchResult.html">cayleypy.algo.BeamSearchResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.algo.RandomWalksGenerator.html">cayleypy.algo.RandomWalksGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.models.ModelConfig.html">cayleypy.models.ModelConfig</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">cayleypy.models.GroupTokenizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cayleypy.models.GroupTokenizer"><code class="docutils literal notranslate"><span class="pre">GroupTokenizer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.models.MlpModel.html">cayleypy.models.MlpModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.models.ResMlpModel.html">cayleypy.models.ResMlpModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.models.graph_hash.html">cayleypy.models.graph_hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.models.save_checkpoint.html">cayleypy.models.save_checkpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cayleypy.models.load_checkpoint.html">cayleypy.models.load_checkpoint</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#training">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#bfs-algorithm-and-its-variations">BFS algorithm and its variations</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CayleyPy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">CayleyPy API Reference</a></li>
+      <li class="breadcrumb-item active">cayleypy.models.GroupTokenizer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/cayleypy.models.GroupTokenizer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cayleypy-models-grouptokenizer">
+<h1>cayleypy.models.GroupTokenizer<a class="headerlink" href="#cayleypy-models-grouptokenizer" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cayleypy.models.</span></span><span class="sig-name descname"><span class="pre">GroupTokenizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/models/tokenizer.py#L14-L169"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.models.GroupTokenizer" title="Link to this definition"></a></dt>
+<dd><p>Converts states to sequences of tokens, one token per group of consecutive elements of a state.</p>
+<p>States of puzzles are usually encoded as permutations of sticker ids, where stickers of one piece occupy
+consecutive positions. Such state can be described more compactly by one token per piece: the token says which
+piece is in this slot and how it is oriented. For example, the Megaminx state has 120 elements: 20 corners with
+3 stickers each, followed by 30 edges with 2 stickers each. It is described by 50 tokens (one per piece), and each
+token takes one of 60 values (20 corners times 3 orientations, or 30 edges times 2 orientations). Such tokenization
+is described by groups <code class="docutils literal notranslate"><span class="pre">[[3,</span> <span class="pre">20],</span> <span class="pre">[2,</span> <span class="pre">30]]</span></code>, see <code class="xref py py-attr docutils literal notranslate"><span class="pre">cayleypy.models.ModelConfig.tokenizer_groups</span></code>.</p>
+<p>The i-th token is the value of the first element of the i-th group, counted from the beginning of the segment this
+group belongs to (a segment is all groups described by one <code class="docutils literal notranslate"><span class="pre">[group_size,</span> <span class="pre">num_groups]</span></code> pair). Therefore token ids
+of one segment are in range <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">group_size</span> <span class="pre">*</span> <span class="pre">num_groups)</span></code>, and token ids of different segments overlap. Models
+can tell segments apart by position, or by adding an embedding of <cite>token_type_ids</cite> to the embedding of tokens.</p>
+<p>This encodes the state without loss of information as long as elements of one group are always stickers of one
+piece, listed in the same cyclic order - then the whole group is determined by its first element. Use
+<a class="reference internal" href="#cayleypy.models.GroupTokenizer.verify" title="cayleypy.models.GroupTokenizer.verify"><code class="xref py py-meth docutils literal notranslate"><span class="pre">verify()</span></code></a> to check this for a particular graph.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">cayleypy.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">GroupTokenizer</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">GroupTokenizer</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">]])</span>  <span class="c1"># Megaminx.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenizer</span><span class="o">.</span><span class="n">n_tokens</span><span class="p">,</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">vocab_size</span>
+<span class="go">(50, 60)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/models/tokenizer.py#L40-L87"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.models.GroupTokenizer.__init__" title="Link to this definition"></a></dt>
+<dd><p>Creates tokenizer for states grouped as described by <cite>groups</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>groups</strong> – Specification of groups, as a list of <code class="docutils literal notranslate"><span class="pre">[group_size,</span> <span class="pre">num_groups]</span></code> pairs. Groups are laid out in
+the state consecutively, in the order they are listed here.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.models.GroupTokenizer.__init__" title="cayleypy.models.GroupTokenizer.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(groups)</p></td>
+<td><p>Creates tokenizer for states grouped as described by <cite>groups</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.models.GroupTokenizer.from_config" title="cayleypy.models.GroupTokenizer.from_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_config</span></code></a>(config)</p></td>
+<td><p>Creates tokenizer described by <cite>tokenizer_groups</cite> field of the given model config.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.models.GroupTokenizer.verify" title="cayleypy.models.GroupTokenizer.verify"><code class="xref py py-obj docutils literal notranslate"><span class="pre">verify</span></code></a>(graph_def)</p></td>
+<td><p>Checks that states of the given graph are tokenized without loss of information.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.models.GroupTokenizer.groups" title="cayleypy.models.GroupTokenizer.groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">groups</span></code></a></p></td>
+<td><p>Groups this tokenizer was created with, as a list of <code class="docutils literal notranslate"><span class="pre">[group_size,</span> <span class="pre">num_groups]</span></code> pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.models.GroupTokenizer.state_size" title="cayleypy.models.GroupTokenizer.state_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state_size</span></code></a></p></td>
+<td><p>Number of elements in the state this tokenizer expects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.models.GroupTokenizer.n_tokens" title="cayleypy.models.GroupTokenizer.n_tokens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_tokens</span></code></a></p></td>
+<td><p>Number of tokens one state is converted to.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.models.GroupTokenizer.n_token_types" title="cayleypy.models.GroupTokenizer.n_token_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_token_types</span></code></a></p></td>
+<td><p>Number of segments (i.e. of <code class="docutils literal notranslate"><span class="pre">[group_size,</span> <span class="pre">num_groups]</span></code> pairs describing this tokenization).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cayleypy.models.GroupTokenizer.vocab_size" title="cayleypy.models.GroupTokenizer.vocab_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vocab_size</span></code></a></p></td>
+<td><p>Number of distinct values a token can take (i.e. size of vocabulary needed to embed tokens).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cayleypy.models.GroupTokenizer.token_type_ids" title="cayleypy.models.GroupTokenizer.token_type_ids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">token_type_ids</span></code></a></p></td>
+<td><p>Index of the segment each token belongs to, of shape <code class="docutils literal notranslate"><span class="pre">[n_tokens]</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer.from_config">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.models.ModelConfig.html#cayleypy.models.ModelConfig" title="cayleypy.models.models.ModelConfig"><span class="pre">ModelConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cayleypy.models.GroupTokenizer" title="cayleypy.models.tokenizer.GroupTokenizer"><span class="pre">GroupTokenizer</span></a></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/models/tokenizer.py#L89-L107"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.models.GroupTokenizer.from_config" title="Link to this definition"></a></dt>
+<dd><p>Creates tokenizer described by <cite>tokenizer_groups</cite> field of the given model config.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config</strong> – Config of a model that consumes tokens.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tokenizer described by this config.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer.groups">
+<span class="sig-name descname"><span class="pre">groups</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#cayleypy.models.GroupTokenizer.groups" title="Link to this definition"></a></dt>
+<dd><p>Groups this tokenizer was created with, as a list of <code class="docutils literal notranslate"><span class="pre">[group_size,</span> <span class="pre">num_groups]</span></code> pairs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer.n_token_types">
+<span class="sig-name descname"><span class="pre">n_token_types</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#cayleypy.models.GroupTokenizer.n_token_types" title="Link to this definition"></a></dt>
+<dd><p>Number of segments (i.e. of <code class="docutils literal notranslate"><span class="pre">[group_size,</span> <span class="pre">num_groups]</span></code> pairs describing this tokenization).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer.n_tokens">
+<span class="sig-name descname"><span class="pre">n_tokens</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#cayleypy.models.GroupTokenizer.n_tokens" title="Link to this definition"></a></dt>
+<dd><p>Number of tokens one state is converted to.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer.state_size">
+<span class="sig-name descname"><span class="pre">state_size</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#cayleypy.models.GroupTokenizer.state_size" title="Link to this definition"></a></dt>
+<dd><p>Number of elements in the state this tokenizer expects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer.token_type_ids">
+<span class="sig-name descname"><span class="pre">token_type_ids</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Tensor</span></span><a class="headerlink" href="#cayleypy.models.GroupTokenizer.token_type_ids" title="Link to this definition"></a></dt>
+<dd><p>Index of the segment each token belongs to, of shape <code class="docutils literal notranslate"><span class="pre">[n_tokens]</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer.verify">
+<span class="sig-name descname"><span class="pre">verify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph_def</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cayleypy.CayleyGraphDef.html#cayleypy.CayleyGraphDef" title="cayleypy.CayleyGraphDef"><span class="pre">CayleyGraphDef</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/cayleypy/cayleypy/blob/main/cayleypy/../cayleypy/models/tokenizer.py#L126-L145"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cayleypy.models.GroupTokenizer.verify" title="Link to this definition"></a></dt>
+<dd><p>Checks that states of the given graph are tokenized without loss of information.</p>
+<p>This holds when the central state lists stickers of every piece in one group, and every generator moves
+stickers of one piece to positions of one piece, preserving their cyclic order. Then every state reachable from
+the central state has one piece per group, so the group is determined by its first element (i.e. by its token).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>graph_def</strong> – Definition of the graph whose states are going to be tokenized.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If states of this graph cannot be tokenized this way.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cayleypy.models.GroupTokenizer.vocab_size">
+<span class="sig-name descname"><span class="pre">vocab_size</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#cayleypy.models.GroupTokenizer.vocab_size" title="Link to this definition"></a></dt>
+<dd><p>Number of distinct values a token can take (i.e. size of vocabulary needed to embed tokens).</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cayleypy.models.ModelConfig.html" class="btn btn-neutral float-left" title="cayleypy.models.ModelConfig" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cayleypy.models.MlpModel.html" class="btn btn-neutral float-right" title="cayleypy.models.MlpModel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, CayleyPy Foundation.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
