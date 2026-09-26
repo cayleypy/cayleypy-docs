@@ -17,6 +17,7 @@
       ~MatrixGroups.heisenberg
       ~MatrixGroups.special_linear_fundamental_roots
       ~MatrixGroups.special_linear_root_weyl
+      ~MatrixGroups.unitriangular_fundamental_roots
    
    
 
