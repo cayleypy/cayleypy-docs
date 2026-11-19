@@ -20,7 +20,6 @@
       ~BfsResult.diameter
       ~BfsResult.get_edge_name
       ~BfsResult.get_layer
-      ~BfsResult.has_edges_list_hashes
       ~BfsResult.laplacian_matrix
       ~BfsResult.last_layer
       ~BfsResult.load
